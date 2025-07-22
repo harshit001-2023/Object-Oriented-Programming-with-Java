@@ -1,15 +1,18 @@
-public class Headmaster extends School {
+package src.inheritance;
 
-    private int exerience;
+class Headmaster extends School {
 
-    public Headmaster(String name, String department, int exerience){
+    private int experience;
+/// Headmaster constructor
+    public Headmaster(String name, String department, int experience){
         super(name, department);
-        this.exerience = exerience;
+        this.experience = experience;
     }
 
+    /// method showRole
     public void showRole(){
         showDetails();
         System.out.println("Role : Head");
-        System.out.println("Experience: "+exerience+" years.");
+        System.out.println("Experience: "+ experience +" years.");
     }
 }

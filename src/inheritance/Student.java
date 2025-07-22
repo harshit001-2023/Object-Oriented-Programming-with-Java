@@ -1,4 +1,8 @@
-class Student extends School{
+package src.inheritance;
+
+import src.inheritance.School;
+
+class Student extends School {
     private int rollNumber;
 
     public Student(String name, String department, int rollNumber) {

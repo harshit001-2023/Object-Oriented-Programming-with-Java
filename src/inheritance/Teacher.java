@@ -1,4 +1,8 @@
-public class Teacher extends School {
+package src.inheritance;
+
+import src.inheritance.School;
+
+class Teacher extends School {
     private String subject;
 
     public Teacher(String name, String department, String subject){
