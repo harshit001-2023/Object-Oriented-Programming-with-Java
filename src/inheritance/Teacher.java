@@ -11,8 +11,13 @@ class Teacher extends School {
     }
 
     public void showRole(){
-        showDetails();
         System.out.println("Role: Teacher");
         System.out.println("Subject: "+subject);
     }
+    // Applying concept of Method overloading
+     public void showRole(int std){
+         showDetails();
+         showRole();
+         System.out.println("Class: "+std+"th");
+     }
 }

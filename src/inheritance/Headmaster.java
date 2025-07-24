@@ -15,4 +15,9 @@ class Headmaster extends School {
         System.out.println("Role : Head");
         System.out.println("Experience: "+ experience +" years.");
     }
+    /// Applying concept of Method overloading
+    public void showRole(String role){
+        showRole();
+        System.out.println("HM Responsibility: "+role);
+    }
 }
