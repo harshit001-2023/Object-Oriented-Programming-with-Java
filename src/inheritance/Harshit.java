@@ -13,8 +13,9 @@ public class Harshit extends Student{
 
     //Implementing runtime polymorphism
     @Override
-    public void showDetails() {
+    public void showDetails(Student student) {
         super.showDetails();
+        student.showRole(10);
         System.out.println("Name is "+name);
         System.out.println("Department is "+department);
         System.out.println("Address "+address);

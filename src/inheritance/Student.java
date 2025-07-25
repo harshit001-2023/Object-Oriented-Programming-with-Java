@@ -2,7 +2,7 @@ package src.inheritance;
 
 import src.inheritance.School;
 
-class Student extends School {
+abstract class Student extends School {
     private int rollNumber;
 
     public Student(String name, String department, int rollNumber) {
@@ -20,4 +20,7 @@ class Student extends School {
         showRole();
         System.out.println("Student Name: "+std);
     }
+
+    //Implementing runtime polymorphism
+    public abstract void showDetails(Student student);
 }

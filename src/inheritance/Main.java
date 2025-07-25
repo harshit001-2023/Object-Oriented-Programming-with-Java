@@ -21,8 +21,8 @@ public class Main {
         System.out.println("-----------------");
 
         //Reference object of Class Student
-        Student s = new Student("Rahul", "Science", 1023);
-        s.showRole(6);//showROle method calling of class Student
+//        Student s = new Student("Rahul", "Science", 1023);
+//        s.showRole(6);//showROle method calling of class Student
 
         System.out.println("-----------------");
 
