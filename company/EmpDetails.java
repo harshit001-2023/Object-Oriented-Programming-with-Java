@@ -8,8 +8,10 @@ public class EmpDetails {
 
         emp.empDetails();
         emp.position();
+        System.out.print("\n");
         emp1.empDetails();
         emp1.position();
+        System.out.print("\n");
         emp2.empDetails();
         emp2.position();
     }
