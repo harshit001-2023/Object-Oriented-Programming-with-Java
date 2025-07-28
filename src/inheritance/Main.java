@@ -24,6 +24,17 @@ public class Main {
 //        Student s = new Student("Rahul", "Science", 1023);
 //        s.showRole(6);//showROle method calling of class Student
 
+        //Applying Encapsulation
+        Student student = new Student("Rahul", "Science", 1023) {
+            @Override
+            public void showDetails(Student student) {
+            }
+        };
+        student.setName("Harshit");
+        student.setRollNumber(23);
+        student.setMarks(83);
+        System.out.println(student.getName()+" , "+student.getRollNumber()+ " , "+ student.getMarks());
+
         System.out.println("-----------------");
 
         Harshit hp = new Harshit("Harshit", "Science", 48, "CND");
