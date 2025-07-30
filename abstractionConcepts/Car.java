@@ -1,22 +1,25 @@
 package abstractionConcepts;
 
-public class Car extends NoiseLevel{
+/**
+ * Concrete class representing a Car that implements NoiseLevel interface.
+ */
+public class Car implements NoiseLevel {
     @Override
-    public void enigne() {
+    public void engine() {
         System.out.println("Engine Type: BS6");
     }
 
     @Override
     public void vehicleType() {
-        super.vehicleType();
         System.out.println("Four Wheeler: Car");
-
     }
 
-    public void info(){
+    /**
+     * Prints complete information about this car
+     */
+    public void printDetails() {
         vehicleType();
-        enigne();
+        engine();
         lowNoise();
     }
-
 }

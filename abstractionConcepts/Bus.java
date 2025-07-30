@@ -1,21 +1,26 @@
 package abstractionConcepts;
 
-public class Bus extends NoiseLevel{
+/**
+ * Concrete class representing a Bus that implements NoiseLevel interface.
+ */
+public class Bus implements NoiseLevel {
     @Override
-    void enigne() {
+    public void engine() {
         System.out.println("BS6");
         System.out.println("30 ltrs, Latest Engine for Buses");
     }
 
     @Override
     public void vehicleType() {
-        super.vehicleType();
         System.out.println("Four Wheeler: Bus");
     }
 
-    public void info(){
+    /**
+     * Prints complete information about this bus
+     */
+    public void printDetails() {
         vehicleType();
-        enigne();
+        engine();
         highNoise();
     }
 }
