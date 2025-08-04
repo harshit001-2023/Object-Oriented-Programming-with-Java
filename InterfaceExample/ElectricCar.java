@@ -3,17 +3,17 @@ package InterfaceExample;
 public class ElectricCar implements Vehicle, EVMaintenance {
     @Override
     public void softwareUpdate() {
-        System.out.println("Updating Software...");
+        System.out.println("*Updating Software...");
     }
 
     @Override
     public void serviceDue() {
-        System.out.println("Maintenance Required");
+        System.out.println("*Maintenance Required");
     }
 
     @Override
     public void batteryCheck() {
-        System.out.println("Battery Problem visit official center");
+        System.out.println("*Battery Problem* please visit official center");
     }
 
     @Override
