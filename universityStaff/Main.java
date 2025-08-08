@@ -24,12 +24,12 @@ public class Main {
         ArrayList<Staff> staffList = new ArrayList<>();
         staffList.add(new Professor("Dr. Ram Bhadracharya", "Humanities", 17700.0));
         staffList.add(new AssistantProfessor("Ms. Shailu Krishnan", "Computer Science", 15000.0));
-        staffList.add(new Clerk("Mr. Riddhesh Patel", "MBA", 13500));
+        staffList.add(new Clerk("Mr. Riddhesh Patel", "MBA", 13500.0));
 
-        for (Staff s : staffList){
-            s.calculateSalary();
-            s.displayInfo();
-            s.calculateBonus();
+        System.out.println("=== UNIVERSITY STAFF PAYROLL ===");
+        for (Staff staff : staffList) {
+            staff.displayInfo();
+            System.out.println("----------------------------");
         }
     }
 }

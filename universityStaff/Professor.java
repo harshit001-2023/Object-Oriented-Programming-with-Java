@@ -1,37 +1,22 @@
 package universityStaff;
 
-public class Professor extends Employee implements Staff {
-    double monthlySalary;
-    double annualIncome;
-    String name;
-    String department;
-    final String designation;
-
+public class Professor extends Employee {
     public Professor(String name, String department, double monthlySalary) {
-        this.name = name;
-        this.department = department;
-        designation = "Professor";
-        this.monthlySalary = monthlySalary;
-    }
-
-    //Salary Calculation formula for Annual Income = Monthly Salary * 12 Months
-    @Override
-    public void calculateSalary() {
-        annualIncome = monthlySalary * 12;
+        super(name, department, "Professor", monthlySalary);
     }
 
     @Override
     public double calculateBonus() {
-        return annualIncome * 0.10; // 10% for example
+        return annualIncome * 0.10; // 10% bonus
     }
-
 
     @Override
     public void displayInfo() {
-        System.out.println("Name: "+name);
-        System.out.println("Department: "+department);
-        System.out.println("Designation: "+designation);
-        System.out.println("Salary per Month is "+monthlySalary+" therefore Annual Income is "+annualIncome+" with 10% Bonus");
+        calculateSalary();
+        System.out.println("Name: " + name);
+        System.out.println("Department: " + department);
+        System.out.println("Designation: " + designation);
+        System.out.printf("Salary per Month: ₹%.2f | Annual Income: ₹%.2f | Bonus: ₹%.2f | Total Income: ₹%.2f%n",
+                monthlySalary, annualIncome, calculateBonus(), (annualIncome+calculateBonus()));
     }
 }
-
