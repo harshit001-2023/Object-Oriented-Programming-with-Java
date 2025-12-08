@@ -47,7 +47,7 @@ public class BankCustomer {
                     break;
 
                 default:
-                    IO.println("Enter valid choice: ");
+                    IO.println("Enter valid choice: [1-5]");
                     break;
 
 

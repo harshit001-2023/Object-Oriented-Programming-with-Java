@@ -15,11 +15,14 @@ public class Bank {
         accountNumber = accNumber;
         currentBalance = balance;
 
-        if (currentBalance == 0) System.exit(0);
+        if (currentBalance <= 0) {
+            System.err.println("Enter more than zero.");
+            System.exit(0);
+        }
     }
 
     public void withdraw(double amount){
-        if(amount > currentBalance) {
+        if(amount < currentBalance) {
             System.err.println("You have insufficient balance");
             System.exit(0);
         } else {
