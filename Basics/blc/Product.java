@@ -21,9 +21,9 @@ public class Product {
         double tenPercentDis = (price * 0.1);
         double fifteenPercentDis = (price * 0.15);
 
-        if(price < 1000) IO.println("Discount amount = "+fivePercentDis+"\nDiscounted Price is "+(price+fivePercentDis));
-        else if (price >= 1000 && price <= 5000) IO.println("Discount amount = "+tenPercentDis+"\nDiscounted Price is "+(price+tenPercentDis));
-        else IO.println("Discount amount = "+fifteenPercentDis+"\nDiscounted Price is "+(price+fifteenPercentDis));
+        if(price < 1000) IO.println("Discount amount = "+fivePercentDis+"\nDiscounted Price is "+(price-fivePercentDis));
+        else if (price >= 1000 && price <= 5000) IO.println("Discount amount = "+tenPercentDis+"\nDiscounted Price is "+(price-tenPercentDis));
+        else IO.println("Discount amount = "+fifteenPercentDis+"\nDiscounted Price is "+(price-fifteenPercentDis));
     }
 
     @Override
