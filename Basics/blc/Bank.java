@@ -69,7 +69,6 @@ Customer [Name=Ravi, AccountNumber=12345, Balance=13000.0]*/
 
 package Basics.blc;
 
-
 public class Bank {
     private String customerName;
     private int accountNumber;
@@ -91,7 +90,7 @@ public class Bank {
     }
 
     public void withdraw(double amount){
-        if(amount < currentBalance) {
+        if(amount > currentBalance) {
             System.err.println("You have insufficient balance");
             System.exit(0);
         } else {
