@@ -18,7 +18,7 @@ public class Car {
         } else if (price <= 0) {
             System.err.println("Price must be positive integer");
             System.exit(0);
-        } else toString();
+        } else IO.println(toString());
     }
 
     @Override
