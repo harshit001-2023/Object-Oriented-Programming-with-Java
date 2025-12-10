@@ -9,7 +9,6 @@ public class ConstructorDemo {
         double price = Double.parseDouble(IO.readln("Enter Car Price: "));
 
         Car car = new Car(model, year, price);
-        car.validation();
-//        IO.println(car);
+        IO.println(car);
     }
 }
