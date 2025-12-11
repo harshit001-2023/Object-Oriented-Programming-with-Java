@@ -57,7 +57,7 @@ Expected Output:
 
 Error: Width and height must be non-negative.*/
 
- Basics.elc;
+package Basics.elc;
 
 import Basics.blc.Rectangle;
 
