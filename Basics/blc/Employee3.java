@@ -20,8 +20,8 @@ public class Employee3 {
     public double calculateAnnualSalary() {
         double annualBase = salary * 12;
         double bonusPercentage = switch(department.toUpperCase()) {
-            case "ENGINEERING" -> 0.10;
-            case "SALES" -> 0.15;
+            case "ENGINEERING" -> 0.15;
+            case "SALES" -> 0.10;
             case "HR" -> 0.08;
             default -> 0.05;
         };
@@ -30,6 +30,7 @@ public class Employee3 {
     }
 
     public String toString() {
-        return "ID: " + id +", Name: "+name+", Department: "+department+", Monthly Salary:"+salary+", Anuual Salary (with Bonus): "+calculateAnnualSalary();
+        return String.format("ID: %d, Name: %s, Department: %s, Monthly Salary: %.2f,\nAnnual Salary (with Bonus): %.2f",
+                id, name, department, salary, calculateAnnualSalary());
     }
 }
