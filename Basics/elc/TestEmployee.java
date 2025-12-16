@@ -100,7 +100,8 @@ public class TestEmployee {
             double salary = Double.parseDouble(IO.readln());
             String department = IO.readln();
 
-            Employee3 employee = new Employee3(name, id, department, salary);
+            Employee3 employee = Employee3.createEmployeeObject(name, id, department, salary);
+//            Employee3 employee = new Employee3(name, id, department, salary);
 
             employee.calculateAnnualSalary();
             IO.println(employee.toString());
