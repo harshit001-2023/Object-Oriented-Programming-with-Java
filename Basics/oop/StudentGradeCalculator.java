@@ -59,7 +59,7 @@ class StudentGrade{
         this.student = student;
     }
 
-    public Student getStudent(){
+    public Student1 getStudent(){
         return this.getStudent();
     }
 
@@ -83,7 +83,7 @@ class CalculateStudentGrade{
         if(studentMarks > 90) return new StudentGrade(student,'A');
         else if(studentMarks<90 && studentMarks >= 75) return new StudentGrade(student,'B');
         else if(studentMarks < 75 && studentMarks >= 60) return new StudentGrade(student,'C');
-        else return new StudentGrade(student,'A');
+        else return new StudentGrade(student,'D');
     }
 
 }
