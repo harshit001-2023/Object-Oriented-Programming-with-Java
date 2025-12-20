@@ -6,7 +6,7 @@ c.The default constructor calls super() and initializes all instance variables t
 d.If we want to call parent class constructor, it must be called in first line of constructor.
 A. 1,2 and 3   B.2   C. 1   D. 1,2,3 and 4
 
-    ANS: A)
+    ANS: D)
 
 2) Which of the following modifier is not applicable for constructors?
 	A. private   	B. protected  	C. public 	D. final
@@ -48,7 +48,7 @@ A. 1,2 and 3   B.2   C. 1   D. 1,2,3 and 4
 	B. protected
 	C. default
 	D. same as class accessibility modifier
-	ANS: C)
+	ANS: D)
 
 9)  Can we define a constructor using all four access modifiers:
     public, protected, default and private?
@@ -209,7 +209,7 @@ public class Test9 {
 		Test7 t = new Test7(35);
 	}
 }
-    ANS: Error, return type required
+    ANS: Error, mismatch class name
 
 19) What is the output of the below program?
 public class Test9 {
@@ -243,7 +243,7 @@ public class Test14 {
 		p.call();
 	}
 }
-    ANS: Call method called
+    ANS: Compile-time error
 
 
 21) What is the output of the below program?
@@ -259,7 +259,7 @@ public class Test16 {
   		IO.println("Emp Name : "+e.name);
  	}
 }
-    ANS: Can't access to private class
+    ANS: Compile-time error, Can't access to private field 
 
 22) What is the output of the below program?
 class Person{
