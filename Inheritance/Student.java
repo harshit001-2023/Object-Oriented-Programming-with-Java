@@ -1,6 +1,4 @@
-package src.inheritance;
-
-import src.inheritance.School;
+package Inheritance;
 
 abstract class Student extends School {
     //Applying Encalsulation concepts

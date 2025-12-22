@@ -1,4 +1,4 @@
-package src.inheritance;
+package Inheritance;
 
 class Headmaster extends School {
 

@@ -1,4 +1,4 @@
-package src.inheritance;
+package Inheritance;
 
 public class School {
     protected String name;
