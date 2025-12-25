@@ -12,17 +12,17 @@ class Student{
         this.example = example;
     }
 }
-class DayScholer extends Student{
+class DayScholar extends Student{
     protected double transportFee;
 
-    public DayScholer(int id, String name, double example, double transportFee) {
+    public DayScholar(int id, String name, double example, double transportFee) {
         super(id, name, example);
         this.transportFee = transportFee;
     }
 
     @Override
     public String toString() {
-        return "DayScholer{" +
+        return "DayScholar{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", example=" + example +
@@ -30,17 +30,17 @@ class DayScholer extends Student{
                 '}';
     }
 }
-class Hosteller extends Student{
+class Hosteler extends Student{
     protected double hostelFess;
 
-    public Hosteller(int id, String name, double example, double hostelFess) {
+    public Hosteler(int id, String name, double example, double hostelFess) {
         super(id, name, example);
         this.hostelFess = hostelFess;
     }
 
     @Override
     public String toString() {
-        return "Hosteller{" +
+        return "Hosteler{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", example=" + example +
@@ -50,10 +50,10 @@ class Hosteller extends Student{
 }
 public class Hierarchical {
     static void main() {
-        DayScholer dayScholer = new DayScholer(101, "Sam", 8000, 1000);
-        IO.println(dayScholer);
+        DayScholar dayScholar = new DayScholar(101, "Sam", 8000, 1000);
+        IO.println(dayScholar);
 
-        Hosteller hosteller = new Hosteller(102, "sam2", 60000, 1000);
-        IO.println(hosteller);
+        Hosteler hosteler = new Hosteler(102, "sam2", 60000, 1000);
+        IO.println(hosteler);
     }
 }
