@@ -300,9 +300,7 @@ public class Test
         new Derived();
     }
 }
-ANS: Base constructor
-     Derived int: 5
-     Derived no-arg
+ANS: Compile Time Error
 -----------------------------------------------------------------------------------
 Q10) What will be the output of the following program?
 
@@ -331,7 +329,7 @@ class B extends A
         IO.println("i = " + i);
     }
 }
-ANS: i = 1
+ANS: Compile Time Error
 -----------------------------------------------------------------------------------
 Q11) What will be the output of the following program?
 
@@ -379,7 +377,7 @@ class Car extends Vehicle
         IO.print("Executed Successfully");
     }
 }
-ANS: Error
+ANS: Executed Successfully
 -----------------------------------------------------------------------------------
 Q12) What will be the output of the following program?
 
@@ -450,8 +448,7 @@ public class Test
         new Derived();
     }
 }
-ANS: Base()
-     Base(int) 20
+ANS: Base(int) 20
      Derived(int) 20
      Derived()
 -----------------------------------------------------------------------------------
@@ -475,7 +472,7 @@ public class Test
         new X();
     }
 }
-ANS: Error, recurring this
+ANS: Error, recurring this, Compile-time recursive constructor invocation.
 -----------------------------------------------------------------------------------
 Q15) What will be the output of the following program?
 
@@ -507,8 +504,7 @@ public class Test
 	   new Beta();
    }
 }
-ANS: Alpha class constructor
-     Beta class constructor
+ANS: getMessage() is non-static, but called inside super()
 -----------------------------------------------------------------------------------
 Q16) What will be the output of the following program?
 
@@ -568,8 +564,8 @@ public class Test
 	   new Beta();
    }
 }
-ANS: Alpha class constructor
-     Beta class constructor!!
+ANS: Compile-time error
+     Alpha(String) constructor is private → not accessible.
 -----------------------------------------------------------------------------------
 Q18) What will be the output of the following program?
 
