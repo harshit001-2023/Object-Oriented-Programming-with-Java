@@ -51,7 +51,7 @@ a) Only public members
 b) public and protected members
 c) private members
 d) All members regardless of access modifiers
-
+ANS: B)
 
 Q4) Find the output of the Program
 
@@ -76,6 +76,9 @@ public class Test
         B obj = new B();
     }
 }
+ANS: Class A Constructor
+     Class B Constructor
+
 
 Q5) Find the output of the Program
 
@@ -101,6 +104,8 @@ public class Test
         B obj = new B();
     }
 }
+ANS; Class A: 10
+     Class B
 
 Q6) Find the output of the Program
 
