@@ -4,56 +4,56 @@ a.Constructor name should be same as class name.
 b.If you don't define a constructor for a class, a default no argument constructor is automatically added by java compiler.
 c.The default constructor calls super() and initializes all instance variables to default value like 0, null.
 d.If we want to call parent class constructor, it must be called in first line of constructor.
-A. 1,2 and 3   B.2   C. 1   D. 1,2,3 and 4
+Basics.oop.A. 1,2 and 3   Basics.oop.B.2   C. 1   D. 1,2,3 and 4
 
     ANS: D)
 
 2) Which of the following modifier is not applicable for constructors?
-	A. private   	B. protected  	C. public 	D. final
+	Basics.oop.A. private   	Basics.oop.B. protected  	C. public 	D. final
     ANS: D)
 
 3) The return type of a constructor is ?
-	A. void
-	B. There is no return type
+	Basics.oop.A. void
+	Basics.oop.B. There is no return type
 	C. a class object in which it is defined
 	D. None of these
-    ANS: B)
+    ANS: Basics.oop.B)
 
-4) public class Test
+4) public class Basics.oop.Test
    {    }
    What  is the prototype of the default constructor ?
-	A. public Test(void)
-	B. Test()
-	C. Test(void)
-	D. public Test()
+	Basics.oop.A. public Basics.oop.Test(void)
+	Basics.oop.B. Basics.oop.Test()
+	C. Basics.oop.Test(void)
+	D. public Basics.oop.Test()
 	ANS: D)
 
 5) Can we define method with same name of class name?
-	A. Yes 	B. No
-	ANS: A)
+	Basics.oop.A. Yes 	Basics.oop.B. No
+	ANS: Basics.oop.A)
 
 6) What happens if we add return type to constructor ?
-	A. Compile time error
-	B. Run Time Error
+	Basics.oop.A. Compile time error
+	Basics.oop.B. Run Time Error
 	C. JVM treats that as method
 	D. None of these
 	ANS: C)
 
 7) Can we declare constructor as private ?
-	A. Yes		B. No
-	ANS: A)
+	Basics.oop.A. Yes		Basics.oop.B. No
+	ANS: Basics.oop.A)
 
 8) What is the default accessibility modifier of a default constructor?
-	A. private
-	B. protected
+	Basics.oop.A. private
+	Basics.oop.B. protected
 	C. default
 	D. same as class accessibility modifier
 	ANS: D)
 
 9)  Can we define a constructor using all four access modifiers:
     public, protected, default and private?
-	A. Yes      	B.No
-	ANS: A)
+	Basics.oop.A. Yes      	Basics.oop.B.No
+	ANS: Basics.oop.A)
 
 10) Choose correct option for the following code
     public class ConstructorTest {
@@ -62,8 +62,8 @@ A. 1,2 and 3   B.2   C. 1   D. 1,2,3 and 4
             this.a = a;
         }
     }
-    A.	Run time error
-    B.	No error
+    Basics.oop.A.	Run time error
+    Basics.oop.B.	No error
     C.	Compile time error
     D.	10
     ANS: C)
@@ -82,11 +82,11 @@ public class ConstructorTest {
 		ConstructorTest test = new ConstructorTest();
 	}
     }
-    A.	Run time error
-    B.	Run successfully
+    Basics.oop.A.	Run time error
+    Basics.oop.B.	Run successfully
     C.	Compile time error
     D.	10
-    ANS: B)
+    ANS: Basics.oop.B)
 
 12.	What is the output of the following code
 public class ConstructorTest {
@@ -99,8 +99,8 @@ public class ConstructorTest {
 		ConstructorTest test = new ConstructorTest();
 	}
     }
-    A.	Runtime error
-    B.	Compile time error
+    Basics.oop.A.	Runtime error
+    Basics.oop.B.	Compile time error
     C.	100
     D.	No Output
     ANS: C)
@@ -118,11 +118,11 @@ public class ConstructorTest {
             nit.a;
         }
     }
-    A.	Runtime error
-    B.	Compile time error
+    Basics.oop.A.	Runtime error
+    Basics.oop.B.	Compile time error
     C.	No Output
     D.	10
-    ANS: B)
+    ANS: Basics.oop.B)
 
 14)What is the output of the below program?
 

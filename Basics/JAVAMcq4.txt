@@ -1,31 +1,31 @@
 Q1) Find the Output
 
-class A
+class Basics.oop.A
 {
-    A()
+    Basics.oop.A()
     {
-        IO.println("A Constructor");
+        IO.println("Basics.oop.A Constructor");
     }
 }
 
-class B extends A
+class Basics.oop.B extends Basics.oop.A
 {
-    B()
+    Basics.oop.B()
     {
-        IO.println("B Constructor");
+        IO.println("Basics.oop.B Constructor");
     }
 }
 
-public class Test
+public class Basics.oop.Test
 {
     public static void main(String[] args)
     {
-        new B();
+        new Basics.oop.B();
     }
 }
 
-ANS: A Constructor
-     B Constructor
+ANS: Basics.oop.A Constructor
+     Basics.oop.B Constructor
 -------------------------------------------------------------------------------------------
 Q2) Find the Output
 
@@ -51,7 +51,7 @@ IO.println("Beta class constructor");
 }
 }
 
-public class Test
+public class Basics.oop.Test
 {
     public static void main(String[] args)
     {
@@ -162,7 +162,7 @@ class Child extends Parent
     }
 }
 
-public class Test
+public class Basics.oop.Test
 {
     public static void main(String[] args)
     {
@@ -173,39 +173,39 @@ ANS: 20
 ------------------------------------------------------------------------------------------
 Q6) Find the Output
 
-class A
+class Basics.oop.A
 {
-    A()
+    Basics.oop.A()
     {
-        IO.println("A constructor");
+        IO.println("Basics.oop.A constructor");
     }
 }
 
-class B extends A
+class Basics.oop.B extends Basics.oop.A
 {
-    B()
+    Basics.oop.B()
     {
         this(5);
-        IO.println("B no-arg constructor");
+        IO.println("Basics.oop.B no-arg constructor");
     }
 
-    B(int x)
+    Basics.oop.B(int x)
     {
         super();
-        IO.println("B int constructor: " + x);
+        IO.println("Basics.oop.B int constructor: " + x);
     }
 }
 
-public class Test
+public class Basics.oop.Test
 {
     public static void main(String[] args)
     {
-        new B();
+        new Basics.oop.B();
     }
 }
-ANS: A constructor
-     B int constructor: 5
-     B no-arg constructor
+ANS: Basics.oop.A constructor
+     Basics.oop.B int constructor: 5
+     Basics.oop.B no-arg constructor
 -----------------------------------------------------------------------------------
 Q7) Find the Output
 
@@ -231,7 +231,7 @@ class Child extends Parent
         IO.println("Child: " + s);
     }
 }
-public class Test
+public class Basics.oop.Test
 {
     public static void main(String[] args)
     {
@@ -244,29 +244,29 @@ ANS: Parent s
 -----------------------------------------------------------------------------------
 Q8) Find the Output
 
-class A
+class Basics.oop.A
 {
-    A()
+    Basics.oop.A()
     {
         this(10);
-        IO.println("A no-arg");
+        IO.println("Basics.oop.A no-arg");
     }
 
-    A(int x)
+    Basics.oop.A(int x)
     {
-        IO.println("A int: " + x);
+        IO.println("Basics.oop.A int: " + x);
     }
 }
 
-public class Test
+public class Basics.oop.Test
 {
     public static void main(String[] args)
     {
-        new A();
+        new Basics.oop.A();
     }
 }
-ANS: A int 10
-     A no arg
+ANS: Basics.oop.A int 10
+     Basics.oop.A no arg
 -----------------------------------------------------------------------------------
 Q9) What will be the output of the following program?
 
@@ -293,7 +293,7 @@ class Derived extends Base
     }
 }
 
-public class Test
+public class Basics.oop.Test
 {
     public static void main(String[] args)
     {
@@ -309,20 +309,20 @@ class OutPut
     public static void main(String s[])
     {
         int i = 2;
-        B b = new B();
+        Basics.oop.B b = new Basics.oop.B();
         b.execute();
     }
 }
 
-class A
+class Basics.oop.A
 {
-    A()
+    Basics.oop.A()
     {
         int i = 1;
     }
 }
 
-class B extends A
+class Basics.oop.B extends Basics.oop.A
 {
     void execute()
     {
@@ -441,7 +441,7 @@ class Derived extends Base
     }
 }
 
-public class Test
+public class Basics.oop.Test
 {
     public static void main(String[] args)
     {
@@ -465,7 +465,7 @@ class X
         this();
     }
 }
-public class Test
+public class Basics.oop.Test
 {
     public static void main(String[] args)
     {
@@ -497,7 +497,7 @@ class Beta extends Alpha
 	}
 }
 
-public class Test
+public class Basics.oop.Test
 {
    public static void main(String[] argv)
    {
@@ -529,7 +529,7 @@ class Beta extends Alpha
 	}
 }
 
-public class Test
+public class Basics.oop.Test
 {
    public static void main(String[] argv)
    {
@@ -557,7 +557,7 @@ class Beta extends Alpha
 		IO.println("Beta class constructor!!");
 	}
 }
-public class Test
+public class Basics.oop.Test
 {
    public static void main(String[] argv)
    {
@@ -595,7 +595,7 @@ class Derived extends Base
           IO.println("Derived class parameterized int");
        }
 }
-public class Test
+public class Basics.oop.Test
 {
    public static void main(String[] argv)
    {
@@ -608,7 +608,7 @@ ANS: Base class parameterized String
 -----------------------------------------------------------------------------------
 Q19) What will be the output of the following program?
 
-class A
+class Basics.oop.A
 {
 int i;
 void display()
@@ -616,7 +616,7 @@ void display()
 IO.println(i);
 }
 }
-class B extends A
+class Basics.oop.B extends Basics.oop.A
 {
 int j;
 void display()
@@ -628,7 +628,7 @@ class Inheritance
 {
 public static void main(String args[])
 {
-B obj = new B();
+Basics.oop.B obj = new Basics.oop.B();
 obj.i=1;
 obj.j=2;
 obj.display();
@@ -642,16 +642,16 @@ class Constructors
 {
     public static void main(String[] args)
     {
-        new A(3);
-        new B(5, 6);
-        new B(6, 7).C(1, 2, 3);
-        new C(3, 3, 4).B(4, 5);
+        new Basics.oop.A(3);
+        new Basics.oop.B(5, 6);
+        new Basics.oop.B(6, 7).C(1, 2, 3);
+        new C(3, 3, 4).Basics.oop.B(4, 5);
         new C(1, 1, 1);
     }
 }
-class A
+class Basics.oop.A
 {
-    A(int i)
+    Basics.oop.A(int i)
     {
       print(i * 2);
     }
@@ -660,9 +660,9 @@ class A
     IO.print(i + " ");
     }
 }
-class B extends A
+class Basics.oop.B extends Basics.oop.A
 {
-    B(int j, int k)
+    Basics.oop.B(int j, int k)
     {
         super(j);
         print(k * 4);
@@ -672,14 +672,14 @@ class B extends A
       print(j + k + l - 3);
     }
 }
-class C extends B
+class C extends Basics.oop.B
 {
     C(int j, int k, int l)
     {
         super(j, k);
         print(l - 3);
     }
-    void B(int i, int k)
+    void Basics.oop.B(int i, int k)
     {
       print(i * 6);
     }

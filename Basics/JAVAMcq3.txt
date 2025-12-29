@@ -34,7 +34,7 @@ class Child extends Parent
 {
     protected int num = 200;
 }
-public class Test
+public class Basics.oop.Test
 {
   void main()
    {
@@ -46,66 +46,66 @@ ANS: 200
 
 Q3)
 
-If class B extends class A, what can class B access from class A?
+If class Basics.oop.B extends class Basics.oop.A, what can class Basics.oop.B access from class Basics.oop.A?
 a) Only public members
 b) public and protected members
 c) private members
 d) All members regardless of access modifiers
-ANS: B)
+ANS: Basics.oop.B)
 
 Q4) Find the output of the Program
 
-class A
+class Basics.oop.A
 {
-    A()
+    Basics.oop.A()
     {
-        IO.println("Class A Constructor");
+        IO.println("Class Basics.oop.A Constructor");
     }
 }
-class B extends A
+class Basics.oop.B extends Basics.oop.A
 {
-    B()
+    Basics.oop.B()
     {
-        IO.println("Class B Constructor");
+        IO.println("Class Basics.oop.B Constructor");
     }
 }
-public class Test
+public class Basics.oop.Test
 {
    void main()
     {
-        B obj = new B();
+        Basics.oop.B obj = new Basics.oop.B();
     }
 }
-ANS: Class A Constructor
-     Class B Constructor
+ANS: Class Basics.oop.A Constructor
+     Class Basics.oop.B Constructor
 
 
 Q5) Find the output of the Program
 
-class A
+class Basics.oop.A
 {
-    A(int x)
+    Basics.oop.A(int x)
     {
-        IO.println("Class A: " + x);
+        IO.println("Class Basics.oop.A: " + x);
     }
 }
-class B extends A
+class Basics.oop.B extends Basics.oop.A
 {
-    B()
+    Basics.oop.B()
     {
         super(10);
-        IO.println("Class B");
+        IO.println("Class Basics.oop.B");
     }
 }
-public class Test
+public class Basics.oop.Test
 {
     public static void main(String[] args)
     {
-        B obj = new B();
+        Basics.oop.B obj = new Basics.oop.B();
     }
 }
-ANS; Class A: 10
-     Class B
+ANS; Class Basics.oop.A: 10
+     Class Basics.oop.B
 
 Q6) Find the output of the Program
 
@@ -142,8 +142,8 @@ ANS: Parent Constructor
 
 Q7) Which of the following is NOT true about constructor chaining?
 
-a) A constructor can call another constructor of the same class using this()
-b) A constructor can call a superclass constructor using super()
+a) Basics.oop.A constructor can call another constructor of the same class using this()
+b) Basics.oop.A constructor can call a superclass constructor using super()
 c) this() and super() can be used together in the same constructor
 d) Constructor chaining helps in code reusability
 
@@ -170,7 +170,7 @@ class Child extends Parent
     }
 }
 
-public class Test
+public class Basics.oop.Test
 {
    void main()
     {
@@ -210,7 +210,7 @@ class Beta extends Alpha
     }
 }
 
-public class Test
+public class Basics.oop.Test
 {
    void main(){
         new Beta();
@@ -244,7 +244,7 @@ class Child extends Parent
  }
 }
 
-public class Test
+public class Basics.oop.Test
 {
 void main(){
      Child c = new Child();
@@ -256,43 +256,43 @@ void main(){
 Q12)
 What is a blank final field in Java?
 
-A) A non static final variable with user initialized value.
-B) A non static final variable that is not initialized at declaration but must be initialized till constructor body.
-C) A final variable that can be modified inside a method.
-D) A static final variable.
+Basics.oop.A) Basics.oop.A non static final variable with user initialized value.
+Basics.oop.B) Basics.oop.A non static final variable that is not initialized at declaration but must be initialized till constructor body.
+C) Basics.oop.A final variable that can be modified inside a method.
+D) Basics.oop.A static final variable.
 
 Q13) What happens if a blank final field is not initialized in all constructors?
-A) The program runs normally
-B) It is initialized with a default value
-C) A compile-time error occurs
+Basics.oop.A) The program runs normally
+Basics.oop.B) It is initialized with a default value
+C) Basics.oop.A compile-time error occurs
 D) It is initialized when accessed for the first time
 
 
 
 Q14) Find the Output of the following code
 
-class A
+class Basics.oop.A
 {
     final int num;
 
-    A()
+    Basics.oop.A()
     {
         num = 100;
     }
 }
-class B extends A
+class Basics.oop.B extends Basics.oop.A
 {
-    B()
+    Basics.oop.B()
     {
         num = 200;
     	IO.println(num);
     }
 }
 
-public class Test
+public class Basics.oop.Test
 {
 void main(){
-    new B();
+    new Basics.oop.B();
  }
 }
 
@@ -351,7 +351,7 @@ class Car extends Vehicle
 }
 
 
-public class Test
+public class Basics.oop.Test
 {
 void main()
  {
@@ -416,7 +416,7 @@ class Foo
  public int a = 8;
  public void addFive() { this.a += 5; IO.print("b " ); }
  }
-class Test
+class Basics.oop.Test
 {
 	public static void main(String[] args)
 	{
@@ -454,7 +454,7 @@ class Child extends Parent
 
 }
 
-public class Test
+public class Basics.oop.Test
 {
   void main()
    {
@@ -490,7 +490,7 @@ class Child extends Parent
 
 }
 
-public class Test
+public class Basics.oop.Test
 {
   void main()
    {

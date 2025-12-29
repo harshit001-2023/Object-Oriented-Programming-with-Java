@@ -176,7 +176,7 @@ ANS: 4
 
 
 9. Find the output
-public class Test
+public class Basics.oop.Test
 {
 	public static void main(String[] args)
 	{

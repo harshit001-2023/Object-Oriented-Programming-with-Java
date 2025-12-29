@@ -1,3 +1,5 @@
+package Basics.oop;
+
 class A
 {
     int val = 100;
@@ -7,7 +9,7 @@ class A
     }
     void init()
     {
-        System.out.println("A: " + val);
+        System.out.println("Basics.oop.A: " + val);
     }
 }
 class B extends A
@@ -19,7 +21,7 @@ class B extends A
     }
     void init()
     {
-        System.out.println("B: " + val);
+        System.out.println("Basics.oop.B: " + val);
     }
 }
 class Test

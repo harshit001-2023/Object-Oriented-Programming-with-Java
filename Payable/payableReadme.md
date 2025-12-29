@@ -4,7 +4,7 @@
 ![OOP](https://img.shields.io/badge/OOP-Design-blueviolet)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-A robust Java payment processing system supporting multiple payee types, international payments, and tax calculations.
+Basics.oop.A robust Java payment processing system supporting multiple payee types, international payments, and tax calculations.
 
 ## 📊 Class Diagram
 
@@ -62,9 +62,9 @@ classDiagram
 
 ```mermaid
 flowchart TD
-    A[Payment Processor] --> B[FullTimeEmployee]
-    A --> C[Freelancer]
-    A --> D[Contractor]
+    Basics.oop.A[Payment Processor] --> Basics.oop.B[FullTimeEmployee]
+    Basics.oop.A --> C[Freelancer]
+    Basics.oop.A --> D[Contractor]
     D --> E[Tax Calculation]
     D --> F[Currency Conversion]
 ```

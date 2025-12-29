@@ -1,7 +1,7 @@
 1. What is the output of following code?
-class Test
+class Basics.oop.Test
 {
-Test()
+Basics.oop.Test()
 {
 IO.println("Constructor");
 }
@@ -15,7 +15,7 @@ public class Main
 public static void main(String[] args)
 {
 IO.println("main method");
-new Test();
+new Basics.oop.Test();
 }
 }
 ANS: main method
@@ -25,20 +25,20 @@ ANS: main method
      main method -> super() -> second line for non-static block -> constructor block code
 
 2. what is the output of following code?
-class Test
+class Basics.oop.Test
 {
     {
     IO.println("Non-static Block");
     }
-    Test()
+    Basics.oop.Test()
     {
     IO.println("Constructor");
     }
 
     public static void main(String[] args)
     {
-        Test obj1 = new Test();
-        Test obj2 = new Test();
+        Basics.oop.Test obj1 = new Basics.oop.Test();
+        Basics.oop.Test obj2 = new Basics.oop.Test();
     }
 }
 ANS: Not-static block
@@ -49,8 +49,8 @@ ANS: Not-static block
      // Same for 2nd Call
 
 3.What is true about a non-static block?
-A) It executes before the static block
-B) It executes after the constructor
+Basics.oop.A) It executes before the static block
+Basics.oop.B) It executes after the constructor
 C) It executes before the constructor
 D) It cannot contain instance variables
 
@@ -60,7 +60,7 @@ ANS: C) It executes before the constructor
 
 
 4. What is the output of following code?
-class Test
+class Basics.oop.Test
 {
 	 int x = 10;
 
@@ -70,7 +70,7 @@ class Test
 
 	    public static void main(String[] args)
 	    {
-	        Test obj1 = new Test();
+	        Basics.oop.Test obj1 = new Basics.oop.Test();
 	        IO.println(obj1.x);
 	    }
 }
@@ -81,26 +81,26 @@ ANS: 25
 
 
 5. What is the output of following code?
-class Test
+class Basics.oop.Test
 {
-	Test() {
+	Basics.oop.Test() {
         IO.println("Constructor Called");
     }
 
     public static void main(String[] args)
     {
-        Test obj1;
+        Basics.oop.Test obj1;
         IO.println("Main Method");
     }
 }
 ANS: Main Method
 // Object reference created but not created an object which is with new keyword
-// i.e Test obj1 = new Test(); so constructor not called so class fields and block won't work
+// i.e Basics.oop.Test obj1 = new Basics.oop.Test(); so constructor not called so class fields and block won't work
 //so ans Main Method
 
 6.Can a non-static block initialize instance variables?
-A) No, only constructors can initialize instance variables.
-B) Yes, but only static variables.
+Basics.oop.A) No, only constructors can initialize instance variables.
+Basics.oop.B) Yes, but only static variables.
 C) Yes, it can initialize instance variables before the constructor
    executes.
 D) Only final instance variables.
@@ -108,18 +108,18 @@ ANS: C)
 
 
 7. What is the output of following code?
-class Test
+class Basics.oop.Test
 {
 int a ;
 public static void main(String args[ ])
 {
-new Test();
+new Basics.oop.Test();
 }
 {
 IO.println(this.a);
 this.a = 100 ;
 }
-Test()
+Basics.oop.Test()
 {
 IO.println(this.a);
 }
@@ -144,25 +144,25 @@ IO.println("Esal : "+e.esal);
 ANS: Eno : 0, Ename : null, Esal = 0.0
 
 9.What is the output of following code?
-class Test{
+class Basics.oop.Test{
     final int a;
 
     public static void main(String[] args){
-        Test obj=new Test();
+        Basics.oop.Test obj=new Basics.oop.Test();
         IO.println(obj.a);
     }
 }
 ANS: Error // final keyword not initialized, it must ne initialized by developer
 
 10. What is the output of following code?
-class Test{
+class Basics.oop.Test{
     int a;
     {
-        Test obj = new Test();
+        Basics.oop.Test obj = new Basics.oop.Test();
         IO.println(a);
     }
     public static void main(String[] args){
-        Test obj=new Test();
+        Basics.oop.Test obj=new Basics.oop.Test();
         IO.println(obj.a);
     }
 }
@@ -204,7 +204,7 @@ ANS: Compile-Time Error
 
 13. Write a java program can we create object without having non-static
 variable in the class?
-class Test
+class Basics.oop.Test
 {
 void m1(){
 IO.println("m1() method");
@@ -212,7 +212,7 @@ IO.println("m1() method");
 public static void main(String[] args)
 {
 IO .println("main method");
-Test t=new Test();
+Basics.oop.Test t=new Basics.oop.Test();
 t.m1();
 }
 }
@@ -297,7 +297,7 @@ ANS: Non Static Block
 
 17 Find the Output :
 
-class Test
+class Basics.oop.Test
 {
   private int x = 99 ;
 
@@ -305,7 +305,7 @@ class Test
 	  x = 15;
   }
 
-  public Test()
+  public Basics.oop.Test()
   {
 	  super();
 	  x = 56;
@@ -320,7 +320,7 @@ public class Order
 {
 	public static void main(String[] args)
 	{
-		Test t1 = new Test();
+		Basics.oop.Test t1 = new Basics.oop.Test();
 
 		IO.println(t1.getX());
 	}
@@ -329,7 +329,7 @@ public class Order
 ANS: x = 56
 
 18. Find the Output
-class Test
+class Basics.oop.Test
 {
 	final int x;
 
@@ -339,11 +339,11 @@ class Test
 		IO.println(x);
 	}
 }
-class Test
+class Basics.oop.Test
 {
 	public static void main(String[] args)
 	{
-		Test t1 = new Test();
+		Basics.oop.Test t1 = new Basics.oop.Test();
 		t1.setData();
 	}
 }
@@ -361,7 +361,7 @@ class Demo{
 		IO.println("Default Value :"+x);
 	}
 }
-public class Test{
+public class Basics.oop.Test{
 	public static void main(String[] args){
 		Demo d1 = new Demo();
 		IO.println("User value :"+d1.x);
@@ -380,7 +380,7 @@ class Foo{
 	   x = 300;
 	}
 }
-public class Test{
+public class Basics.oop.Test{
 	public static void main(String[] args){
 		Foo f1 = new Foo();
 		IO.println(f1.x);
@@ -391,18 +391,18 @@ ANS: Compile-time error
 
 21. Find the Output
 
-class Test{
-    Test(){
+class Basics.oop.Test{
+    Basics.oop.Test(){
     this(10);
     }
-    Test(int x){
+    Basics.oop.Test(int x){
     this();
     }
     public static void main(String[] args){
-        Test obj = new Test();
+        Basics.oop.Test obj = new Basics.oop.Test();
     }
 }
 ANS: Not confirmed but error or nothing
 Infinite recursion Compile-time error:
-Test() → this(10)
-Test(int) → this()
+Basics.oop.Test() → this(10)
+Basics.oop.Test(int) → this()
