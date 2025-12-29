@@ -40,7 +40,7 @@ class Y extends X
     }
 }
 
-class Test
+class X3
 {
     public static void main(String[] args)
     {
