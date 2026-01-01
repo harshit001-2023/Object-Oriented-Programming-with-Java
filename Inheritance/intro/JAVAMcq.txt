@@ -325,6 +325,10 @@ public class Test
 		obj1.greet();
     }
 }
+ANS: Main Method
+     Constructor: Singleton Object Created
+     Static Block: Singleton Instance Created
+     Hello Everyone!!!
 
 Q10) Find the Output :
 
@@ -352,9 +356,9 @@ public class Test
 		System.out.println("Main Method Executed ");
 	}
 }
+ANS: Main Method Executed
 
 Q11) Find the Output :
-
 class  Alpha
 {
 	static
@@ -395,6 +399,7 @@ public class Test
 		new Beta();
 	}
 }
+ANS: ABCDEF
 
 
 Q12) Find the Output :
@@ -416,6 +421,7 @@ public class Test
         System.out.println(Demo.i);
 	}
 }
+ANS: 100
 
 Q13) Find the Output :
 
@@ -437,7 +443,7 @@ public class Test
         System.out.println(Demo.i);
 	}
 }
-
+ANS: java: illegal forward reference
 
 Q14) Find the Output :
 
@@ -457,7 +463,7 @@ public class Test
           new Demo();
 	}
 }
-
+ANS: java: illegal forward reference
 
 Q15) Find the Output :
 
