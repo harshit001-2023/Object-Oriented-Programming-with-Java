@@ -424,7 +424,6 @@ public class Test
 ANS: 100
 
 Q13) Find the Output :
-
 class Demo
 {
     static
@@ -446,7 +445,6 @@ public class Test
 ANS: java: illegal forward reference
 
 Q14) Find the Output :
-
 class Demo
 {
 	{
@@ -489,9 +487,10 @@ public class Test
 		System.out.println("User value :"+Alpha.A);
 	}
 }
+ANS: Default value :0
+     User value :100
 
 Q16) Find the Output :
-
 class Test
 {
 	public static final Test t1 = new Test(); //t1 = null;
@@ -518,10 +517,13 @@ public class Demo
 	   new Test();
 	}
 }
-
+ANS: Non static block
+     No Argument Constructor
+     static block
+     Non static block
+     No Argument Constructor
 
 Q17) Find the Output :
-
 class Sample
 {
 	static
@@ -539,8 +541,6 @@ class Sample
 
 	static int x;
 }
-
-
 public class Test
 {
 	public static void main(String[] args)
@@ -548,9 +548,12 @@ public class Test
 		System.out.println(Sample.x);
 	}
 }
+ANS: Static Block
+     Static Method
+     100
+     100
 
 Q18) Find the Output :
-
 class  Alpha
 {
    public static void print()
@@ -568,7 +571,7 @@ public class Test
 		Alpha.print();
 	}
 }
-
+ANS: 100
 
 Q19) Find the Output :
 
@@ -588,9 +591,9 @@ public class Test
 		System.out.println(Alpha.MAX_VALUE);
 	}
 }
+ANS: 100
 
 Q20) Find the Output
-
 class  Alpha
 {
    public static final int MAX_VALUE = access();
@@ -613,11 +616,12 @@ public class Test
 		System.out.println(Alpha.MAX_VALUE);
 	}
 }
+ANS: Static Block
+     100
 
 Q21)
 public class StaticTrick
 {
-
     static
     {
         System.out.println("Static block: y = " + y);
@@ -631,6 +635,7 @@ public class StaticTrick
         System.out.println("Main: y = " + y);
     }
 }
+ANS: java: illegal forward reference
 
 Q22)
 class A
@@ -653,6 +658,8 @@ public class StaticTrick
         System.out.println("Main method");
     }
 }
+ANS: Class StaticTrick static block
+     Main method
 
 Q23)
 class Parent
@@ -683,9 +690,11 @@ public class StaticTrick5
         Child.hello();
     }
 }
+ANS: Parent static block
+     Child static block
+     Hello from Child
 
 Q24)
-
 public class StaticTrick9
 {
     static StaticTrick9 obj;
@@ -706,11 +715,13 @@ public class StaticTrick9
         System.out.println("Main method");
     }
 }
+ANS: Constructor executed
+     Static block executed
+     Main method
 
 Q25)
 public class StaticTrick
 {
-
     static final int X;
     static final int Y;
 
@@ -730,3 +741,5 @@ public class StaticTrick
         System.out.println("Y = " + Y);
     }
 }
+ANS: X = 5
+     Y = 10
