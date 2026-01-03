@@ -2,10 +2,12 @@ package Inheritance.intro.StudentFeeManagementSystem;
 
 
 class Student{
+    // Declaring class fields
     protected int studentId;
     protected String name;
     protected double examFee;
 
+    //Parameterized constructor
     public Student(int studentId, String name, double examFee) {
         // Validate inputs
         if (studentId <= 0 || examFee <= 0) {
