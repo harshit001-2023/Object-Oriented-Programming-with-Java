@@ -44,6 +44,7 @@ class Student{
 class DayScholar extends Student{
     private final double transportFee;
 
+    // Constructor and parameter validation
     public DayScholar(int studentId, String name, double examFee, double transportFee) {
         super(studentId, name, examFee);
         if (transportFee <= 0) {
