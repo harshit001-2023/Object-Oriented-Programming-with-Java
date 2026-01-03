@@ -19,10 +19,13 @@ class Student{
         this.examFee = examFee;
     }
 
+    // String Method
     public String displayDetails() {
         return String.format("Student[name=%s,studentId=%d,examFee=%.1f]",
                 name, studentId, examFee);
     }
+
+    // Implementing logic for Fee paid
     public double payFee(double amount) {
         double totalFee = examFee;
         double remaining = totalFee - amount;
@@ -37,6 +40,7 @@ class Student{
     }
 }
 
+// Sub Class inheriting Student1 super class properties
 class DayScholar extends Student{
     private final double transportFee;
 
