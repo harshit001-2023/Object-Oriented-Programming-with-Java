@@ -1,3 +1,24 @@
+class EmployeeSalarySlip{
+    void main() {
+        int choice = Integer.parseInt(IO.readln());
+        int id = Integer.parseInt(IO.readln());
+        String name = IO.readln();
+
+
+        if (choice == 1) {
+            double salary = Double.parseDouble(IO.readln());
+            FullTimeEmployee fullTimeEmployee = new FullTimeEmployee(id, name, salary);
+
+            IO.println(name + " Salary is : " + fullTimeEmployee.calculateSalary());
+        } else if (choice == 2) {
+            int hourlyRate = Integer.parseInt(IO.readln());
+            int hoursWorked = Integer.parseInt(IO.readln());
+            PartTimeEmployee partTimeEmployee = new PartTimeEmployee(id, name, hourlyRate, hoursWorked);
+            IO.println(name + " Salary is :" + partTimeEmployee.calculateSalary());
+        }
+    }
+}
+
 class Employee{
     protected int id;
     protected String name;
@@ -35,32 +56,15 @@ class PartTimeEmployee extends Employee{
 
     public PartTimeEmployee(int id, String name, double hourlyRate, int hoursWorked) {
         super(id, name);
+        if(hourlyRate <= 0){
+            IO.println("Employee hourly rate can't be zero OR Negative");
+            System.exit(0);
+        }
         this.hourlyRate = hourlyRate;
         this.hoursWorked = hoursWorked;
     }
 
     public double calculateSalary(){
         return (hourlyRate*hoursWorked);
-    }
-}
-
-class EmployeeSalarySlip{
-    void main() {
-        int choice = Integer.parseInt(IO.readln());
-        int id = Integer.parseInt(IO.readln());
-        String name = IO.readln();
-
-
-        if (choice == 1) {
-            double salary = Double.parseDouble(IO.readln());
-            FullTimeEmployee fullTimeEmployee = new FullTimeEmployee(id, name, salary);
-
-            IO.println(name + " Salary is : " + fullTimeEmployee.calculateSalary());
-        } else if (choice == 2) {
-            int hourlyRate = Integer.parseInt(IO.readln());
-            int hoursWorked = Integer.parseInt(IO.readln());
-            PartTimeEmployee partTimeEmployee = new PartTimeEmployee(id, name, hourlyRate, hoursWorked);
-            IO.println(name + " Salary is : " + partTimeEmployee.calculateSalary());
-        }
     }
 }
