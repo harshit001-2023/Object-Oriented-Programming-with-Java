@@ -90,10 +90,10 @@ class FixedDepositAccount extends BankAccount{
 
 public class BankApplication{
     void main(){
-        int choice = Integer.parseInt(IO.readln());
-        String accountHolderName = IO.readln();
-        String accountNumber = IO.readln();
-        double balance = Double.parseDouble(IO.readln());
+        int choice = Integer.parseInt(IO.readln("Enter Choice [1/2/3]: "));
+        String accountHolderName = IO.readln("Enter Account Holder Name: ");
+        String accountNumber = IO.readln("Account Number: ");
+        double balance = Double.parseDouble(IO.readln("Enter Bbalance: "));
         BankAccount  bankAccount = null;
 
 
@@ -111,7 +111,7 @@ public class BankApplication{
                 break;
 
             case 3:
-                int depositTerm = Integer.parseInt(IO.readln());
+                int depositTerm = Integer.parseInt(IO.readln("Enter Deposit Terms : "));
                 bankAccount = new FixedDepositAccount(accountHolderName, accountNumber, balance, depositTerm);
                 bankAccount.displayAccountDetails();
                 bankAccount.calculateInterest();
