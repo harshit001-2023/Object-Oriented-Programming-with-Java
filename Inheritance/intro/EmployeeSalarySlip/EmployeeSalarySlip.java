@@ -1,3 +1,5 @@
+package Inheritance.intro.EmployeeSalarySlip;
+
 class EmployeeSalarySlip{
     void main() {
         int choice = Integer.parseInt(IO.readln());
@@ -57,7 +59,7 @@ class PartTimeEmployee extends Employee{
     public PartTimeEmployee(int id, String name, double hourlyRate, int hoursWorked) {
         super(id, name);
         if(hourlyRate <= 0){
-            IO.println("Employee hourly rate can't be zero OR Negative");
+            IO.println("Inheritance.intro.EmployeeSalarySlip.Employee hourly rate can't be zero OR Negative");
             System.exit(0);
         }
         this.hourlyRate = hourlyRate;

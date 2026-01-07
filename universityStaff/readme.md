@@ -14,14 +14,14 @@ classDiagram
         +displayInfo()
     }
     
-    class Employee {
+    class Inheritance.intro.EmployeeSalarySlip.Employee {
         <<abstract>>
         #String name
         #String department
         #String designation
         #double monthlySalary
         #double annualIncome
-        +Employee(String name, String department, String designation, double monthlySalary)
+        +Inheritance.intro.EmployeeSalarySlip.Employee(String name, String department, String designation, double monthlySalary)
         +calculateSalary()
         +calculateBonus()* double
         +displayInfo()*
@@ -45,16 +45,16 @@ classDiagram
         +displayInfo()
     }
     
-    Staff <|.. Employee
-    Employee <|-- Professor
-    Employee <|-- AssistantProfessor
-    Employee <|-- Clerk
+    Staff <|.. Inheritance.intro.EmployeeSalarySlip.Employee
+    Inheritance.intro.EmployeeSalarySlip.Employee <|-- Professor
+    Inheritance.intro.EmployeeSalarySlip.Employee <|-- AssistantProfessor
+    Inheritance.intro.EmployeeSalarySlip.Employee <|-- Clerk
 ```
 
 ## Key Features
 
 1. **Staff Hierarchy**:
-   - `Employee` abstract class implements `Staff` interface
+   - `Inheritance.intro.EmployeeSalarySlip.Employee` abstract class implements `Staff` interface
    - Concrete classes: `Professor`, `AssistantProfessor`, and `Clerk`
 
 2. **Core Functionality**:
@@ -63,7 +63,7 @@ classDiagram
    - Detailed information display
 
 3. **Design Patterns**:
-   - Template Method Pattern (via `Employee` abstract class)
+   - Template Method Pattern (via `Inheritance.intro.EmployeeSalarySlip.Employee` abstract class)
    - Strategy Pattern (different bonus calculations)
 
 ## Class Responsibilities
@@ -71,7 +71,7 @@ classDiagram
 | Class | Responsibility |
 |-------|----------------|
 | `Staff` | Interface defining staff operations |
-| `Employee` | Abstract base class with common attributes |
+| `Inheritance.intro.EmployeeSalarySlip.Employee` | Abstract base class with common attributes |
 | `Professor` | Handles professor-specific calculations (10% bonus) |
 | `AssistantProfessor` | Handles assistant professor calculations (8% bonus) |
 | `Clerk` | Handles clerk calculations (5% bonus) |
@@ -109,7 +109,7 @@ Salary per Month: $20000.00 | Annual Income: $240000.00 | Bonus: $24000.00
    - Dependency Inversion (depends on abstractions)
 
 2. **DRY Principle**:
-   - Common functionality in `Employee` base class
+   - Common functionality in `Inheritance.intro.EmployeeSalarySlip.Employee` base class
    - No code duplication between staff types
 ```
 

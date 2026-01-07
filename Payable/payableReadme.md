@@ -30,7 +30,7 @@ classDiagram
         +getIBAN() String
     }
     
-    class FullTimeEmployee {
+    class Inheritance.intro.EmployeeSalarySlip.FullTimeEmployee {
         -String name
         -double monthlySalary
         -double bonus
@@ -51,7 +51,7 @@ classDiagram
         +displayPaymentConfirmation()
     }
     
-    Payable <|.. FullTimeEmployee
+    Payable <|.. Inheritance.intro.EmployeeSalarySlip.FullTimeEmployee
     Payable <|.. Freelancer
     Payable <|.. Contractor
     Taxable <|.. Contractor
@@ -62,7 +62,7 @@ classDiagram
 
 ```mermaid
 flowchart TD
-    Basics.oop.A[Payment Processor] --> Basics.oop.B[FullTimeEmployee]
+    Basics.oop.A[Payment Processor] --> Basics.oop.B[Inheritance.intro.EmployeeSalarySlip.FullTimeEmployee]
     Basics.oop.A --> C[Freelancer]
     Basics.oop.A --> D[Contractor]
     D --> E[Tax Calculation]
@@ -82,7 +82,7 @@ flowchart TD
 ```java
 // 1. Create payees
 Payable[] payables = {
-    new FullTimeEmployee("Jane Smith", 5000, 1000),
+    new Inheritance.intro.EmployeeSalarySlip.FullTimeEmployee("Jane Smith", 5000, 1000),
     new Freelancer("John Doe", 50.0, 80),
     new Contractor("Tech Solutions", 15000, 2500)
 };
@@ -98,7 +98,7 @@ for (Payable payable : payables) {
 ## 📝 Sample Output
 
 ```
-Employee: Jane Smith
+Inheritance.intro.EmployeeSalarySlip.Employee: Jane Smith
 Salary: $5000.00 | Bonus: $1000.00
 Total Payment: $6000.00
 Payment processed successfully
@@ -128,7 +128,7 @@ pie
 | `Payable` | Core payment interface |
 | `Taxable` | Handles tax calculations |
 | `InternationalPayment` | Manages cross-border payments |
-| `FullTimeEmployee` | Salaried employee implementation |
+| `Inheritance.intro.EmployeeSalarySlip.FullTimeEmployee` | Salaried employee implementation |
 | `Freelancer` | Hourly worker implementation |
 | `Contractor` | Project-based worker with international support |
 

@@ -247,15 +247,15 @@ public class Test14 {
 
 
 21) What is the output of the below program?
-class Employee{
+class Inheritance.intro.EmployeeSalarySlip.Employee{
  	private String name;
- 	public Employee(String name) {
+ 	public Inheritance.intro.EmployeeSalarySlip.Employee(String name) {
   		this.name=name;
  	}
 }
 public class Test16 {
  	public static void main(String[] Java) {
-  		Employee e = new Employee("JavaDeveloper");
+  		Inheritance.intro.EmployeeSalarySlip.Employee e = new Inheritance.intro.EmployeeSalarySlip.Employee("JavaDeveloper");
   		IO.println("Emp Name : "+e.name);
  	}
 }

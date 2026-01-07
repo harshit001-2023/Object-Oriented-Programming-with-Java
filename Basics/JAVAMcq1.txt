@@ -128,14 +128,14 @@ ANS: 0
      100
 
 8. What is the output of following code?
-class Employee
+class Inheritance.intro.EmployeeSalarySlip.Employee
 {
 int eno ;
 String ename ;
 float esal ;
 public static void main(String[] args)
 {
-Employee e = new Employee();
+Inheritance.intro.EmployeeSalarySlip.Employee e = new Inheritance.intro.EmployeeSalarySlip.Employee();
 IO.println("Eno : "+e.eno);
 IO.println("Ename : "+e.ename);
 IO.println("Esal : "+e.esal);
