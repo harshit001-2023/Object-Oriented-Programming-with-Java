@@ -91,7 +91,7 @@ class PaymentProcessing{
         Payment[] payments = new Payment[n];
 
         // Read each payment choice
-        for (int i = 0; i < n; i++) {
+        for (int i = 1; i <= n; i++) {
             var choice = Integer.parseInt(IO.readln("Enter your choice [1/2/3]: "));
 
             switch (choice) {
