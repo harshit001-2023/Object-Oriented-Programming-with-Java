@@ -370,7 +370,7 @@ public static void newPrint(A1 a)
         a.printName();
     }
 }
-ANS: Value-A
+ANS: Name-B
 -----------------------------------------------------------------------
 Q13)
 class A
@@ -406,6 +406,7 @@ public class Test29
         a.printName();
     }
 }
+ANS: Name-C
 -----------------------------------------------------------------------
 Q14)
 
