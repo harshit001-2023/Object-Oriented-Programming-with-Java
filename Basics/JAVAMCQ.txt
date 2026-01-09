@@ -130,7 +130,7 @@ public class T
 {
   int pCode= 99;
 }
-public class Inheritance.intro.Assignment.Main
+public class Inheritance.intro.Assignment.Inheritance.intro.Abstraction.Main
 {
    public static void main(String args[])
    {
@@ -148,7 +148,7 @@ public class T {
     x = 45;
   }
 }
-public class Inheritance.intro.Assignment.Main {
+public class Inheritance.intro.Assignment.Inheritance.intro.Abstraction.Main {
    public static void main(String args[]) {
       T t1 = new T();
       IO.println(t1.x);
@@ -172,7 +172,7 @@ public class Inheritance.intro.Assignment.Main {
         return "(" + re + " + " + im + ")";
     }
 }
-class Inheritance.intro.Assignment.Main {
+class Inheritance.intro.Assignment.Inheritance.intro.Abstraction.Main {
     public static void main(String[] args) {
         Complex c1 = new Complex(10, 15);
         Complex c2 = new Complex(c1);
@@ -226,10 +226,10 @@ public class Test9 {
     ANS: Error, return type required
 
 20) What is the output of the below program?
-class Product {
+class Inheritance.intro.Abstraction.Product {
 	int x;
 	int y;
-	public Product(int x,int y) {
+	public Inheritance.intro.Abstraction.Product(int x,int y) {
 		this.x = x;
 		this.y = y;
 	}
@@ -239,7 +239,7 @@ class Product {
 }
 public class Test14 {
 	public static void main (String[] args) {
-		Product p = new Product();
+		Inheritance.intro.Abstraction.Product p = new Inheritance.intro.Abstraction.Product();
 		p.call();
 	}
 }

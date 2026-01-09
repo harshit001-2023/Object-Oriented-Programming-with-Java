@@ -110,11 +110,11 @@ public class Test
     }
     public static void main(String[] args)
     {
-        System.out.println("Inheritance.intro.Assignment.Main Method Executed");
+        System.out.println("Inheritance.intro.Assignment.Inheritance.intro.Abstraction.Main Method Executed");
     }
 }
 ANS: Static Block Executed
-     Inheritance.intro.Assignment.Main Method Executed
+     Inheritance.intro.Assignment.Inheritance.intro.Abstraction.Main Method Executed
 
 
 Q2) Find the Output :
@@ -134,17 +134,17 @@ class B extends A
     }
 }
 
-public class Inheritance.intro.Assignment.Main
+public class Inheritance.intro.Assignment.Inheritance.intro.Abstraction.Main
 {
     public static void main(String[] args)
     {
         B obj = new B();
-        System.out.println("Inheritance.intro.Assignment.Main Method");
+        System.out.println("Inheritance.intro.Assignment.Inheritance.intro.Abstraction.Main Method");
     }
 }
 ANS: Class A Static Block
      Class B Static Block
-     Inheritance.intro.Assignment.Main Method
+     Inheritance.intro.Assignment.Inheritance.intro.Abstraction.Main Method
 
 Q3) Find the Output :
 
@@ -237,12 +237,12 @@ class Test
 
     public static void main(String[] args)
     {
-        System.out.println("Inheritance.intro.Assignment.Main Method Started");
+        System.out.println("Inheritance.intro.Assignment.Inheritance.intro.Abstraction.Main Method Started");
         display();
     }
 }
 ANS: Static Block Executed
-     Inheritance.intro.Assignment.Main Method Started
+     Inheritance.intro.Assignment.Inheritance.intro.Abstraction.Main Method Started
      Static Method Executed
 
 Q7) Find the Output :
@@ -282,11 +282,11 @@ class Test
 {
 	public static void main(String[] args)
 	{
-       System.out.println("Inheritance.intro.Assignment.Main Method VALUE = " + Demo.VALUE);
+       System.out.println("Inheritance.intro.Assignment.Inheritance.intro.Abstraction.Main Method VALUE = " + Demo.VALUE);
     }
 }
 ANS: Value is 50
-     Inheritance.intro.Assignment.Main Method VALUE = 50
+     Inheritance.intro.Assignment.Inheritance.intro.Abstraction.Main Method VALUE = 50
 
 Q9) Find the Output :
 
@@ -320,12 +320,12 @@ public class Test
 {
     public static void main(String[] args)
 	{
-        System.out.println("Inheritance.intro.Assignment.Main Method");
+        System.out.println("Inheritance.intro.Assignment.Inheritance.intro.Abstraction.Main Method");
         Singleton obj1 = Singleton.getInstance();
 		obj1.greet();
     }
 }
-ANS: Inheritance.intro.Assignment.Main Method
+ANS: Inheritance.intro.Assignment.Inheritance.intro.Abstraction.Main Method
      Constructor: Singleton Object Created
      Static Block: Singleton Instance Created
      Hello Everyone!!!
@@ -353,10 +353,10 @@ public class Test
 {
 	public static void main(String [] args)
 	{
-		System.out.println("Inheritance.intro.Assignment.Main Method Executed ");
+		System.out.println("Inheritance.intro.Assignment.Inheritance.intro.Abstraction.Main Method Executed ");
 	}
 }
-ANS: Inheritance.intro.Assignment.Main Method Executed
+ANS: Inheritance.intro.Assignment.Inheritance.intro.Abstraction.Main Method Executed
 
 Q11) Find the Output :
 class  Alpha
@@ -632,7 +632,7 @@ public class StaticTrick
 
     public static void main(String[] args)
     {
-        System.out.println("Inheritance.intro.Assignment.Main: y = " + y);
+        System.out.println("Inheritance.intro.Assignment.Inheritance.intro.Abstraction.Main: y = " + y);
     }
 }
 ANS: java: illegal forward reference
@@ -655,11 +655,11 @@ public class StaticTrick
 
     public static void main(String[] args)
     {
-        System.out.println("Inheritance.intro.Assignment.Main method");
+        System.out.println("Inheritance.intro.Assignment.Inheritance.intro.Abstraction.Main method");
     }
 }
 ANS: Class StaticTrick static block
-     Inheritance.intro.Assignment.Main method
+     Inheritance.intro.Assignment.Inheritance.intro.Abstraction.Main method
 
 Q23)
 class Parent
@@ -712,12 +712,12 @@ public class StaticTrick9
 
     public static void main(String[] args)
     {
-        System.out.println("Inheritance.intro.Assignment.Main method");
+        System.out.println("Inheritance.intro.Assignment.Inheritance.intro.Abstraction.Main method");
     }
 }
 ANS: Constructor executed
      Static block executed
-     Inheritance.intro.Assignment.Main method
+     Inheritance.intro.Assignment.Inheritance.intro.Abstraction.Main method
 
 Q25)
 public class StaticTrick

@@ -14,7 +14,7 @@ class Child extends Parent
        IO.println("Child");
     }
 }
-public class Inheritance.intro.Assignment.Main
+public class Inheritance.intro.Assignment.Inheritance.intro.Abstraction.Main
 {
    void main()
     {
@@ -129,7 +129,7 @@ class Child extends Parent
         IO.println("Child Constructor with x: " + x);
     }
 }
-public class Inheritance.intro.Assignment.Main
+public class Inheritance.intro.Assignment.Inheritance.intro.Abstraction.Main
 {
     public static void main(String[] args)
     {

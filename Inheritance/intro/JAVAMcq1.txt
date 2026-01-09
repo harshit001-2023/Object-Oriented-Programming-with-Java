@@ -384,13 +384,13 @@ public class Example4
 
     public static void main(String[] args)
     {
-        System.out.println("Inheritance.intro.Assignment.Main: x = " + x);
+        System.out.println("Inheritance.intro.Assignment.Inheritance.intro.Abstraction.Main: x = " + x);
     }
 }
 ANS: Static Block 1: 10
      m1 executed
      Static Block 2: 20
-     Inheritance.intro.Assignment.Main: x = 25
+     Inheritance.intro.Assignment.Inheritance.intro.Abstraction.Main: x = 25
 
 ------------------------------------------------------------------------
 Que-17) : What is the output of below program ?
@@ -417,12 +417,12 @@ public class Example5
 
     public static void main(String[] args)
     {
-        System.out.println("Inheritance.intro.Assignment.Main Method");
+        System.out.println("Inheritance.intro.Assignment.Inheritance.intro.Abstraction.Main Method");
         System.out.println("Class A a :" + ClassA.a);
     }
 }
 ANS: Example5 Static Block
-     Inheritance.intro.Assignment.Main Method
+     Inheritance.intro.Assignment.Inheritance.intro.Abstraction.Main Method
      Static Block :5
      Class A a :10
 
@@ -447,13 +447,13 @@ public class Test
 
     public static void main(String[] args)
     {
-        System.out.println("Inheritance.intro.Assignment.Main Method");
+        System.out.println("Inheritance.intro.Assignment.Inheritance.intro.Abstraction.Main Method");
         Test obj1 = new Test();
         Test obj2 = new Test();
     }
 }
 ANS: Static Block
-     Inheritance.intro.Assignment.Main Method
+     Inheritance.intro.Assignment.Inheritance.intro.Abstraction.Main Method
      Instance Block
      Constructor
      Instance Block
