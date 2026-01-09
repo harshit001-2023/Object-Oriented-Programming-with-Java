@@ -1,4 +1,4 @@
-import java.util.*;
+package Inheritance.intro.Abstraction;
 
 class EmpSal {
     public static void main(String[] args) {
@@ -6,7 +6,7 @@ class EmpSal {
         var choice = Integer.parseInt(IO.readln("Enter Choice [1/2]: "));
         String name = IO.readln("Enter your name: ");
         if (choice == 1) {
-            // Permanent Employee
+            // Permanent Inheritance.intro.Abstraction.Employee
             double basicPay = Double.parseDouble(IO.readln("Enter Basic Pay: "));
             double allowance = Double.parseDouble(IO.readln("Enter Allowance: "));
 
@@ -14,7 +14,7 @@ class EmpSal {
             pE.displayInfo();
 
         } else if (choice == 2) {
-            // Contract Employee
+            // Contract Inheritance.intro.Abstraction.Employee
             double hourlyRate = Double.parseDouble(IO.readln("Enter hourly rate: "));
             double hoursWorked = Double.parseDouble(IO.readln("Enter Hours Worked: "));
 
@@ -38,8 +38,8 @@ abstract class Employee{
     abstract double calculateSalary();
 
     public void displayInfo() {
-        IO.println("Employee Details:");
-        IO.println("Employee Name: " + name);
+        IO.println("Inheritance.intro.Abstraction.Employee Details:");
+        IO.println("Inheritance.intro.Abstraction.Employee Name: " + name);
         IO.println("Salary: " + calculateSalary());
     }
 }

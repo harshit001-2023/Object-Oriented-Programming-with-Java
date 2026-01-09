@@ -98,7 +98,7 @@ for (Payable payable : payables) {
 ## 📝 Sample Output
 
 ```
-Inheritance.intro.EmployeeSalarySlip.Employee: Jane Smith
+Inheritance.intro.EmployeeSalarySlip.Inheritance.intro.Abstraction.Employee: Jane Smith
 Salary: $5000.00 | Bonus: $1000.00
 Total Payment: $6000.00
 Payment processed successfully

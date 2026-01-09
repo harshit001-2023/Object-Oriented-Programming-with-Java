@@ -1,3 +1,5 @@
+package Inheritance.intro.Assignment;
+
 class Customer {
     private String customerName;
     private int creditPoints;
@@ -28,7 +30,7 @@ class CardType {
 
     @Override
     public String toString() {
-        return String.format("The Customer '%s' Is Eligible For '%s' Card.",
+        return String.format("The Inheritance.intro.Assignment.Customer '%s' Is Eligible For '%s' Card.",
                 customer.toString(), cardType);
     }
 }

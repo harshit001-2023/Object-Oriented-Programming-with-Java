@@ -195,7 +195,7 @@ public class Basics.oop.Test
 ANS: NIT
 
 10. Find the output
-class Customer
+class Inheritance.intro.Assignment.Customer
 {
 	private double bill = 1200;
 
@@ -214,13 +214,13 @@ public class PassByValueTest
 {
 	public static void main(String[] args)
 	{
-	  Customer c1 = new Customer();
+	  Inheritance.intro.Assignment.Customer c1 = new Inheritance.intro.Assignment.Customer();
 
 	  updateCustomerBill(c1);
 	  System.out.println(c1.getBill());
 	}
 
-	public static void updateCustomerBill(Customer cust)
+	public static void updateCustomerBill(Inheritance.intro.Assignment.Customer cust)
 	{
 		cust.setBill(1800);
 	}
@@ -228,7 +228,7 @@ public class PassByValueTest
 ANS: 1800
 
 11. Find the output.
-class Customer
+class Inheritance.intro.Assignment.Customer
 {
 	private double bill = 1200;
 
@@ -247,15 +247,15 @@ public class PassByValueTest
 {
 	public static void main(String[] args)
 	{
-	  Customer c1 = new Customer();
+	  Inheritance.intro.Assignment.Customer c1 = new Inheritance.intro.Assignment.Customer();
 
 	  updateCustomerBill(c1);
 	  System.out.println(c1.getBill());
 	}
 
-	public static void updateCustomerBill(Customer cust)
+	public static void updateCustomerBill(Inheritance.intro.Assignment.Customer cust)
 	{
-		cust = new Customer(); //Another Object
+		cust = new Inheritance.intro.Assignment.Customer(); //Another Object
 		cust.setBill(1800);
 	}
 }

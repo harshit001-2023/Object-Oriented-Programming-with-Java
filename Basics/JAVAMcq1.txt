@@ -10,7 +10,7 @@ IO.println("Constructor");
 IO.println("Non-static block");
 }
 }
-public class Main
+public class Inheritance.intro.Assignment.Main
 {
 public static void main(String[] args)
 {
@@ -21,7 +21,7 @@ new Basics.oop.Test();
 ANS: main method
      Non-static block
      Constructor
-     // First Main method println work, then constructor call which then
+     // First Inheritance.intro.Assignment.Main method println work, then constructor call which then
      main method -> super() -> second line for non-static block -> constructor block code
 
 2. what is the output of following code?
@@ -90,13 +90,13 @@ class Basics.oop.Test
     public static void main(String[] args)
     {
         Basics.oop.Test obj1;
-        IO.println("Main Method");
+        IO.println("Inheritance.intro.Assignment.Main Method");
     }
 }
-ANS: Main Method
+ANS: Inheritance.intro.Assignment.Main Method
 // Object reference created but not created an object which is with new keyword
 // i.e Basics.oop.Test obj1 = new Basics.oop.Test(); so constructor not called so class fields and block won't work
-//so ans Main Method
+//so ans Inheritance.intro.Assignment.Main Method
 
 6.Can a non-static block initialize instance variables?
 Basics.oop.A) No, only constructors can initialize instance variables.
@@ -128,14 +128,14 @@ ANS: 0
      100
 
 8. What is the output of following code?
-class Inheritance.intro.EmployeeSalarySlip.Employee
+class Inheritance.intro.EmployeeSalarySlip.Inheritance.intro.Abstraction.Employee
 {
 int eno ;
 String ename ;
 float esal ;
 public static void main(String[] args)
 {
-Inheritance.intro.EmployeeSalarySlip.Employee e = new Inheritance.intro.EmployeeSalarySlip.Employee();
+Inheritance.intro.EmployeeSalarySlip.Inheritance.intro.Abstraction.Employee e = new Inheritance.intro.EmployeeSalarySlip.Inheritance.intro.Abstraction.Employee();
 IO.println("Eno : "+e.eno);
 IO.println("Ename : "+e.ename);
 IO.println("Esal : "+e.esal);
@@ -233,7 +233,7 @@ class Demo{
 }
 ANS: Parameterized Constructor: 10
      No Argument Constructor
-// Main method -> constructor call -> Demo() -> this(10) -> Demo(10) -> Parameterized Constructor 10 then No Argument Constructor
+// Inheritance.intro.Assignment.Main method -> constructor call -> Demo() -> this(10) -> Demo(10) -> Parameterized Constructor 10 then No Argument Constructor
 
 
 15. Find the Output and Check How many times NSB will be executed.

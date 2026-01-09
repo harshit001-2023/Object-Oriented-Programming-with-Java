@@ -130,7 +130,7 @@ public class T
 {
   int pCode= 99;
 }
-public class Main
+public class Inheritance.intro.Assignment.Main
 {
    public static void main(String args[])
    {
@@ -148,7 +148,7 @@ public class T {
     x = 45;
   }
 }
-public class Main {
+public class Inheritance.intro.Assignment.Main {
    public static void main(String args[]) {
       T t1 = new T();
       IO.println(t1.x);
@@ -172,7 +172,7 @@ public class Main {
         return "(" + re + " + " + im + ")";
     }
 }
-class Main {
+class Inheritance.intro.Assignment.Main {
     public static void main(String[] args) {
         Complex c1 = new Complex(10, 15);
         Complex c2 = new Complex(c1);
@@ -247,15 +247,15 @@ public class Test14 {
 
 
 21) What is the output of the below program?
-class Inheritance.intro.EmployeeSalarySlip.Employee{
+class Inheritance.intro.EmployeeSalarySlip.Inheritance.intro.Abstraction.Employee{
  	private String name;
- 	public Inheritance.intro.EmployeeSalarySlip.Employee(String name) {
+ 	public Inheritance.intro.EmployeeSalarySlip.Inheritance.intro.Abstraction.Employee(String name) {
   		this.name=name;
  	}
 }
 public class Test16 {
  	public static void main(String[] Java) {
-  		Inheritance.intro.EmployeeSalarySlip.Employee e = new Inheritance.intro.EmployeeSalarySlip.Employee("JavaDeveloper");
+  		Inheritance.intro.EmployeeSalarySlip.Inheritance.intro.Abstraction.Employee e = new Inheritance.intro.EmployeeSalarySlip.Inheritance.intro.Abstraction.Employee("JavaDeveloper");
   		IO.println("Emp Name : "+e.name);
  	}
 }
