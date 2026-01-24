@@ -1,4 +1,4 @@
-/*2. TypeReversalUsingAbstractClass
+/*2. abstractionConcepts.assignment1.TypeReversalUsingAbstractClass
 Easy
 100 points
 • 130 min suggested
