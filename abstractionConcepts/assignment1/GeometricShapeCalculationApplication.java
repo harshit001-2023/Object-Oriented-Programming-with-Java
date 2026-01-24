@@ -26,8 +26,6 @@ For Triangle Area of Triangle = (1/2) × base × height
 Perimeter of Triangle = side1 + side2 + side3
 */
 
-package abstractionConcepts.assignment1;
-
 abstract class Shape{
     abstract void area();
     abstract void perimeter();
