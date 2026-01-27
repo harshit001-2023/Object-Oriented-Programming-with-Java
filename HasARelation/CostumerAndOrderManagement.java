@@ -1,4 +1,4 @@
-package InnerAndOuterClass;/*Assignment 01 :
+package HasARelation;/*Assignment 01 :
 ----------------
 Title :- Customer and Orders Management
 

@@ -56,9 +56,6 @@ Copied   Car: Car Brand: Hyundai, Model: Creta, Year: 2025, Driver Name: Scott, 
 Original Car: Car Brand: Hyundai, Model: Creta, Year: 2025, Driver Name: Alen, Age: 35
 Copied   Car: Car Brand: Hyundai, Model: Creta, Year: 2025, Driver Name: Scott, Age: 30*/
 
-import java.awt.dnd.DragGestureRecognizer;
-import java.util.function.IntToDoubleFunction;
-
 class Driver{
     private String name;
     private int age;
