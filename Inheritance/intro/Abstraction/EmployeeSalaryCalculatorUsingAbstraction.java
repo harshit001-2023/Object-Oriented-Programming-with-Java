@@ -28,15 +28,19 @@ class EmpSal {
     }
 }
 
+// Abstract Class
 abstract class Employee{
     protected String name;
 
+    // Constructor
     public Employee(String name){
         this.name = name;
     }
 
+    // Abstract Unimplemented method
     abstract double calculateSalary();
 
+    // Method for displaying Info
     public void displayInfo() {
         IO.println("Inheritance.intro.Abstraction.Employee Details:");
         IO.println("Inheritance.intro.Abstraction.Employee Name: " + name);

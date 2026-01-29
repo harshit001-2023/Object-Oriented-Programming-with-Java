@@ -59,19 +59,22 @@ class Main {
     }
 }
 
+// Abstract class
 abstract class Vehicle{
+    // NO body constructor
     public Vehicle(){
 
     }
-
+    // Method
     public static void displayCategory(){
         IO.println("This is a vehicle.");
     }
-
+    // Abstract Unimplemented method
     abstract void startEngine();
 }
 
 class Car extends Vehicle{
+    // Implement abstract method
     void startEngine(){
         IO.println("Car engine started.");
     }
