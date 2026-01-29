@@ -52,27 +52,32 @@ class PermanentEmployee extends Employee{
     protected double basicPay;
     protected double allowance;
 
+    // Constructor
     public PermanentEmployee(String name, double basicPay, double allowance) {
         super(name);
         this.basicPay = basicPay;
         this.allowance = allowance;
     }
 
+    // Overriding Calculate method from parent class
     @Override
     double calculateSalary() {
         return basicPay + allowance;
     }
 }
+
 class ContractEmployee extends Employee{
     protected double hourlyRate;
     protected double hoursWorked;
 
+    // Constructor
     public ContractEmployee(String name, double hourlyRate, double hoursWorked) {
         super(name);
         this.hourlyRate = hourlyRate;
         this.hoursWorked = hoursWorked;
     }
 
+    // Again overriding the method
     @Override
     double calculateSalary() {
         return hourlyRate * hoursWorked;
