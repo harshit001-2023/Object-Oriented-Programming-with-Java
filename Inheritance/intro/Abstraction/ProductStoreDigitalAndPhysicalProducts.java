@@ -167,6 +167,7 @@ abstract class Product {
 
     // Setter and Getter for price
     public void setPrice(double price) {
+        // Validation
         if (price <= 0) {
             throw new IllegalArgumentException("Error Invalid Input.");
         }
@@ -193,12 +194,14 @@ class DigitalProduct extends Product {
 
     public DigitalProduct(String name, double price, String category, String licenseKey) {
         super(name, price, category);
+        // Validation
         if (licenseKey == null || licenseKey.trim().isEmpty()) {
             throw new IllegalArgumentException("Error Invalid Input.");
         }
         this.licenseKey = licenseKey;
     }
 
+    // Method for Applying Discount
     @Override
     public void applyDiscount(double percentage) {
         double currentPrice = getPrice();
@@ -211,6 +214,7 @@ class DigitalProduct extends Product {
         IO.println("New Price :" + discountedPrice);
     }
 
+    // Overriding method and calculating Tax
     @Override
     public double calculateTax() {
         double taxRate = 0.05;  // 5% tax for digital products
@@ -229,12 +233,14 @@ class PhysicalProduct extends Product {
 
     public PhysicalProduct(String name, double price, String category, double shippingWeight) {
         super(name, price, category);
+        // Validation
         if (shippingWeight <= 0) {
             throw new IllegalArgumentException("Error Invalid Input.");
         }
         this.shippingWeight = shippingWeight;
     }
 
+    // Method for Applying Discount
     @Override
     public void applyDiscount(double percentage) {
         double currentPrice = getPrice();
@@ -247,6 +253,7 @@ class PhysicalProduct extends Product {
         IO.println("New Price :" + discountedPrice);
     }
 
+    // Overriding method and calculating Tax
     @Override
     public double calculateTax() {
         double taxRate = 0.08;  // 8% tax for physical products
