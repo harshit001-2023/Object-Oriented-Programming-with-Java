@@ -69,6 +69,8 @@ public class a86
 
   }
 }
+
+ANS: Compilation error due to unreachable statements
 ---------------------------------------------------------------------
 Q4)
 public class a87 {
@@ -94,45 +96,45 @@ public class a87 {
 Q5) What is the superclass of all exceptions in Java?
 a) Error
 b) RuntimeException
-c) Throwable
+c) Throwable    // ANS
 d) Exception
 
 -----------------------------------------------------------------------
 Q6) Which of the following is an unchecked exception?
 a) IOException
 b) SQLException
-c) NullPointerException
+c) NullPointerException // ANS
 d) ClassNotFoundException
 
 -----------------------------------------------------------------------
 Q7) Which keyword is used to manually throw an exception?
 a) throws
-b) throw
+b) throw    // ANS
 c) try
 d) catch
 
 -----------------------------------------------------------------------
 Q8) What is the purpose of the finally block in exception handling?
 a) To handle exceptions not caught by catch.
-b) To execute code regardless of an exception being thrown.
+b) To execute code regardless of an exception being thrown. // ANS
 c) To throw an exception manually.
 d) To close the program after an exception.
 
 -----------------------------------------------------------------------
 Q9) What is the correct order of try, catch, and finally blocks in a Java program?
-a) try, catch, finally
+a) try, catch, finally  // ANS
 b) try, finally, catch
 c) catch, try, finally
 d) finally, try, catch
 ----------------------------------------------------------------------
 Q10) What does the getMessage() method in an exception class do?
 a) Prints the stack trace of the exception.
-b) Returns the error message of the exception.
+b) Returns the error message of the exception.  // ANS
 c) Logs the exception details to a file.
 d) None of the above.
 ----------------------------------------------------------------------
 Q11) What will happen if an exception is not caught in a Java program?
-a) The program will terminate abruptly.
+a) The program will terminate abruptly. // ANS
 b) The program will handle the exception automatically.
 c) The exception will be ignored, and execution will continue.
 d) The program will retry the failed operation.
@@ -140,7 +142,7 @@ d) The program will retry the failed operation.
 Q12)
 Which of the following is true about try-catch blocks in Java?
 a) try block we can write independently (Without try with resourses)
-b) A try block can be followed by multiple catch blocks.
+b) A try block can be followed by multiple catch blocks.    // ANS
 c) try blocks are optional in Java programs.
 d) Only one catch block can follow a try block.
 
@@ -148,7 +150,7 @@ d) Only one catch block can follow a try block.
 Q13)
 What type of exceptions does the java.lang.Error class represent?
 a) Recoverable exceptions.
-b) Unchecked exceptions that indicate serious problems.
+b) Unchecked exceptions that indicate serious problems. // ANS
 c) Checked exceptions that must be handled.
 d) Logical errors in the code.
 
@@ -157,7 +159,7 @@ Q14)
 What happens when an exception occurs in a try block and there is no matching catch block?
 a) The program ignores the exception and continues execution.
 b) The program crashes without any message.
-c) The exception is propagated to the calling method.
+c) The exception is propagated to the calling method.   // ANS
 d) The finally block is skipped.
 
 ----------------------------------------------------------------------
@@ -166,7 +168,7 @@ Q15)
 Which of the following methods prints the exception's stack trace?
 a) getMessage()
 b) toString()
-c) printStackTrace()
+c) printStackTrace()    // ANS
 d) getStackTrace()
 
 ----------------------------------------------------------------------
@@ -175,7 +177,7 @@ Q16)
 Which of the following blocks will execute even if an exception occurs?
 a) try
 b) catch
-c) finally
+c) finally  // ANS
 d) None of the above
 
 ----------------------------------------------------------------------
@@ -184,7 +186,7 @@ Q17)
 Which block must always be associated with a try block?
 a) catch
 b) finally
-c) Either catch or finally
+c) Either catch or finally  // ANS
 d) Both catch and finally
 
 ----------------------------------------------------------------------
@@ -192,7 +194,7 @@ Q18)
 
 What happens when an exception is caught in a catch block?
 a) The program terminates immediately.
-b) The catch block handles the exception, and the program continues.
+b) The catch block handles the exception, and the program continues.    // ANS
 c) The exception is logged, but the program terminates.
 d) The exception is re-thrown automatically.
 
@@ -201,7 +203,7 @@ d) The exception is re-thrown automatically.
 Q19)
 
 Can a try block exist without a catch block?
-a) Yes, if it is followed by a finally block.
+a) Yes, if it is followed by a finally block.   // ANS
 b) No, it must always be followed by a catch block.
 c) Yes, but only if no exceptions are expected.
 d) No, it is syntactically invalid.
@@ -211,7 +213,7 @@ Q20)
 
 What is the purpose of the try-catch-finally structure?
 a) To detect and prevent compile-time errors.
-b) To allow a program to continue running after an exception occurs and handle the resourses.
+b) To allow a program to continue running after an exception occurs and handle the resourses.   // ANS
 c) To terminate the program safely during an exception.
 d) To force garbage collection during exceptions.
 
@@ -232,6 +234,8 @@ class  ExceptionTest
 	}
 }
 
+ANS: java.lang.ArithmeticException: Number is divided by zero
+     java.lang.ArrayIndexOutOfBoundsException: Array is out of limit
 
 Q2) Find the output of the Program
 
@@ -241,7 +245,7 @@ public class a87 {
     try
     {
       throw new OutOfMemoryError();
-      System.out.println("Success");
+      System.out.println("Success"); // Unreachable statement
     }
     catch (Exception e)
     {
@@ -255,6 +259,8 @@ public class a87 {
 
   }
 }
+
+ANS: Unreachable statement
 
 Q3) Find the output of the Program
 
@@ -285,6 +291,9 @@ public class a103
             int y = 7/x;
        }
 }
+ANS: Exception in thread "main" java.lang.ArithmeticException: / by zero
+     	at a103.doStuff(Test.java:25)
+     	at a103.main(Test.java:17)
 
 Q4) Find the output of the Program
 
@@ -327,6 +336,7 @@ Q4) Find the output of the Program
             System.out.println(s);
      }
 }
+ANS: -ic mc mf of
 
 
 Q5) Find the output of the Program
@@ -350,6 +360,10 @@ public class a110
         }
     }
 }
+ANS: In catch IOException: class java.io.IOException
+     In finally
+     Exception in thread "main" java.lang.RuntimeException
+     	at a110.main(Test.java:10)
 
 
 Q6) Find the output of the Program
@@ -390,6 +404,11 @@ public class Test40{
       System.out.println("Exit methodC()");
    }
 }
+ANS: Enter methodA()
+     Enter methodB()
+     Enter methodC()
+     java.lang.ArithmeticException: / by zero
+     Exit main()
 
 Q7) Find the output of the Program
 class Test43
@@ -404,6 +423,8 @@ class Test43
 		System.out.println("Completed..");
 	}
 }
+
+ANS: Unhandled exception: java.lang.Exception
 
 
 Q8) Find the output of the Program
@@ -420,6 +441,7 @@ class Test44
 		System.out.println("Completed..");
 	}
 }
+ANS: Completed..
 
 Q9) Find the output of the Program
 import java.io.*;
@@ -435,6 +457,7 @@ class Test45
 		System.out.println("Completed..");
 	}
 }
+ANS: Completed..
 
 Q10) Find the output of the Program
 import java.io.*;
@@ -450,6 +473,7 @@ class Test46
 		System.out.println("Completed..");
 	}
 }
+ANS: Unhandled exception: java.lang.Exception
 
 Q11) Find the output of the Program
 
@@ -485,6 +509,12 @@ public class Test47
 		return;
 	}
 }
+ANS: Start try
+     Start risky
+     End Risky
+     End try
+     Finally
+     End of main
 
 
 Q12) Find the output of the Program
@@ -521,6 +551,11 @@ public class Test48
 		return;
 	}
 }
+ANS: Start try
+     Start risky
+     Exception Handled
+     Finally
+     End of main
 
 Q13) Find the output of the Program
 
@@ -552,6 +587,9 @@ class ExceptionPropogation
 		System.out.println(10/0);
 	}
 }
+ANS: Main method started
+     Handled in m1
+     Main method ended
 
 
 Q14) Find the output of the Program
@@ -572,6 +610,9 @@ public class a60
                }
        }
 }
+ANS: book list not found!
+     Exception in thread "main" java.io.FileNotFoundException:
+     	at a60.main(Test.java:8)
 
 Q15) Find the output of the Program
 
@@ -601,3 +642,6 @@ class InnerTry
 		System.out.println("Completed");
 	}
 }
+ANS: Null Problem
+     Number Format Problem
+     Completed
