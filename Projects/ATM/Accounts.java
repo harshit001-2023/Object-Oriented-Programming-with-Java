@@ -76,4 +76,26 @@ public class Accounts {
             IO.println("New Savings Account Balance: "+decimalFormat.format(savingsBalance));
         }else IO.println("Balance cannot be Negative."+"\n");
     }
+
+    public void getCheckingDepositInput(){
+        IO.println("Checking Account Balance: "+decimalFormat.format(checkingBalance));
+        IO.println("Enter Deposit Amount: ");
+        double amount = Integer.parseInt(IO.readln());
+
+        if((savingsBalance + amount) >= 0) {
+            calCheckingDeposit(amount);
+            IO.println("New Checking Account Balance: "+decimalFormat.format(checkingBalance));
+        }else IO.println("Balance cannot be Negative."+"\n");
+    }
+
+    public void getSavingsDepositInput(){
+        IO.println("Savings Account Balance: "+decimalFormat.format(savingsBalance));
+        IO.println("Enter Deposit Amount: ");
+        double amount = Integer.parseInt(IO.readln());
+
+        if((savingsBalance + amount) >= 0) {
+            calSavingsDeposit(amount);
+            IO.println("New Savings Account Balance: "+decimalFormat.format(savingsBalance));
+        }else IO.println("Balance cannot be Negative."+"\n");
+    }
 }

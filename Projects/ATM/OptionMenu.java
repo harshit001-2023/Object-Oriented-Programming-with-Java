@@ -39,7 +39,13 @@ public class OptionMenu extends Accounts{
         IO.println("Type 2 - Savings Account");
         IO.println("Type 3 - Exit");
 
-        int selection = Integer.parseInt(IO.readln());
+        int selection = 0;
+        try {
+            selection = Integer.parseInt(IO.readln());
+        } catch (NumberFormatException e){
+            System.err.println("Wrong Input! Enter Valid Input");
+        }
+
 
         switch (selection) {
             case 1:
@@ -51,7 +57,7 @@ public class OptionMenu extends Accounts{
                 break;
 
             case 3:
-                IO.println("Thank you for this ATM...\n");
+                IO.println("Thank you for the Transaction...\n");
                 break;
 
             default:
@@ -68,11 +74,16 @@ public class OptionMenu extends Accounts{
         IO.println("Type 4 - Exit");
         IO.println("Enter choice: ");
 
-        int selection = Integer.parseInt(IO.readln());
+        int selection = 0;
+        try {
+            selection = Integer.parseInt(IO.readln());
+        } catch (NumberFormatException e){
+            System.err.println("Wrong Input! Enter Valid Input");
+        }
 
         switch (selection){
             case 1:
-                IO.println("Checking Account Balance: "+moneyFormat.format());
+                IO.println("Checking Account Balance: "+moneyFormat.format(getCheckingBalance()));
                 getAccountType();
                 break;
 
@@ -104,11 +115,16 @@ public class OptionMenu extends Accounts{
         IO.println("Type 4 - Exit");
         IO.println("Enter valid choice: ");
 
-        int selection = Integer.parseInt(IO.readln());
+        int selection = 0;
+        try {
+            selection = Integer.parseInt(IO.readln());
+        } catch (NumberFormatException e){
+            System.err.println("Wrong Input! Enter Valid Input");
+        }
 
         switch (selection){
             case 1:
-                IO.println("Savings Account Balance: "+moneyFormat.format(getSavingsAccountBalance()));
+                IO.println("Savings Account Balance: "+moneyFormat.format(getSavingsBalance()));
                 getAccountType();
                 break;
 
