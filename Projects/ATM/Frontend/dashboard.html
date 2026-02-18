@@ -1,0 +1,19 @@
+<!-- Simple Dashboard -->
+<div id="dashboard">
+    <h2>Welcome, Customer <span id="custNum"></span></h2>
+
+    <div class="account-tabs">
+        <button onclick="showAccount('checking')">Checking</button>
+        <button onclick="showAccount('savings')">Savings</button>
+    </div>
+
+    <div id="accountView">
+        <p>Balance: <strong id="balance">$0.00</strong></p>
+        <input type="number" id="amount" placeholder="Amount">
+        <button onclick="withdraw()">Withdraw</button>
+        <button onclick="deposit()">Deposit</button>
+    </div>
+
+    <button onclick="logout()">Logout</button>
+</div>
+<script src="js/dashboard.js"></script>

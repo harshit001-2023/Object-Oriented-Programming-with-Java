@@ -1,0 +1,19 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex; justify-content: center; align-items: center;
+  min-height: 100vh; margin: 0;
+}
+form, #dashboard {
+  background: white; padding: 2rem; border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2); width: 320px;
+}
+input, button {
+  width: 100%; padding: 12px; margin: 8px 0;
+  border: 1px solid #ddd; border-radius: 6px;
+}
+button {
+  background: #667eea; color: white; border: none;
+  cursor: pointer; font-weight: 600;
+}
+button:hover { background: #5568d3; }
