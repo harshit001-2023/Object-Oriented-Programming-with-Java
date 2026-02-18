@@ -1,14 +1,14 @@
-package abstractionConcepts.assignment1;/*3. abstractionConcepts.assignment1.CakeOrderMain
+package Abstraction.assignment1;/*3. Abstraction.assignment1.CakeOrderMain
 Easy
 100 points
 • 130 min suggested
 Problem Description
-Create a program on abstract class to display abstractionConcepts.assignment1.Cake details with message and without
+Create a program on abstract class to display Abstraction.assignment1.Cake details with message and without
 event message.
 
 Coding Requirements :
 --------------------
-Create a BLC class called abstractionConcepts.assignment1.Cake with following attributes :
+Create a BLC class called Abstraction.assignment1.Cake with following attributes :
 
 Attributes/Properties/Fields: [Access modifier is private for all the fields]
 
@@ -26,9 +26,9 @@ Methods :
      Return Type : String
      Modifier : public.
      Task : It must return the data as per below format/example.
-     "A Round Chocolate abstractionConcepts.assignment1.Cake Of 4 KG is Ready @ Rs.1600.0"
+     "A Round Chocolate Abstraction.assignment1.Cake Of 4 KG is Ready @ Rs.1600.0"
 
-Create an inherited class "abstractionConcepts.assignment1.OrderedCake". Inherit this from "abstractionConcepts.assignment1.Cake"
+Create an inherited class "Abstraction.assignment1.OrderedCake". Inherit this from "Abstraction.assignment1.Cake"
 Define the following Attributes
 Attributes: [private for all the fields]
 Attribute name : message String
@@ -44,23 +44,23 @@ Name of the method : toString()
      Return Type : String
      Modifier : public.
      Task :Print the following if message is not null
-    "A Square Pineapple abstractionConcepts.assignment1.Cake of 3KG is Ready with Happy Birthday message @ Rs.1200.0".
+    "A Square Pineapple Abstraction.assignment1.Cake of 3KG is Ready with Happy Birthday message @ Rs.1200.0".
       Otherwise display the message from superclass.
 
 
-Create an ELC class abstractionConcepts.assignment1.CakeOrderMain to display cake details with price and message.
+Create an ELC class Abstraction.assignment1.CakeOrderMain to display cake details with price and message.
 
 Examples
 Example 1
 Input:
 Sample Input
 ---------------------
-abstractionConcepts.assignment1.Cake Name: Chocolate
-abstractionConcepts.assignment1.Cake Type: Round
-abstractionConcepts.assignment1.Cake Quantity: 4
+Abstraction.assignment1.Cake Name: Chocolate
+Abstraction.assignment1.Cake Type: Round
+Abstraction.assignment1.Cake Quantity: 4
 Output:
 Sample Output:
-A Round Chocolate abstractionConcepts.assignment1.Cake Of 4 KG is Ready @ Rs.1600.0
+A Round Chocolate Abstraction.assignment1.Cake Of 4 KG is Ready @ Rs.1600.0
 */
 
 
@@ -84,7 +84,7 @@ class Cake {
 
     @Override
     public String toString() {
-        return "A " + shape + " " + flavor + " abstractionConcepts.assignment1.Cake Of " + quantity + " KG is Ready @ Rs." + (quantity * price);
+        return "A " + shape + " " + flavor + " Abstraction.assignment1.Cake Of " + quantity + " KG is Ready @ Rs." + (quantity * price);
     }
 }
 
@@ -107,7 +107,7 @@ class OrderedCake extends Cake {
     @Override
     public String toString() {
         if (message != null && !message.isEmpty()) {
-            return "A " + getShape() + " " + getFlavor() + " abstractionConcepts.assignment1.Cake Of " + getQuantity() +
+            return "A " + getShape() + " " + getFlavor() + " Abstraction.assignment1.Cake Of " + getQuantity() +
                     "KG is Ready with " + message + " message @ Rs." + (getQuantity() * Cake.price);
         }
         return super.toString();

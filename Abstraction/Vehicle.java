@@ -1,4 +1,4 @@
-package abstractionConcepts;
+package Abstraction;
 
 /**
  * Interface representing a generic vehicle.

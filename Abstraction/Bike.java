@@ -1,4 +1,4 @@
-package abstractionConcepts;
+package Abstraction;
 
 /**
  * Concrete class representing a Bike that implements NoiseLevel interface.

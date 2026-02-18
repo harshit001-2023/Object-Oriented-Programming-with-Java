@@ -1,4 +1,4 @@
-package abstractionConcepts;
+package Abstraction;
 
 /**
  * Concrete class representing a Bus that implements NoiseLevel interface.

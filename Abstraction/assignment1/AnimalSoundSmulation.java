@@ -34,7 +34,7 @@ Tiger growls: Grrrrr!
 */
 
 
-package abstractionConcepts.assignment1;
+package Abstraction.assignment1;
 
 class Main{
     void main(){

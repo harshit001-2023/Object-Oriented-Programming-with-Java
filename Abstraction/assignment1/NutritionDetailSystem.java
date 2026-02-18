@@ -59,7 +59,7 @@ A slice of bread has 4.0 gms of protein, 1.1 gms of fats and 13.8 gms of carbohy
 Taste: 8
 */
 
-package abstractionConcepts.assignment1;
+package Abstraction.assignment1;
 
 class Testing{
     void main(){

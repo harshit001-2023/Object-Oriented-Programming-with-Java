@@ -1,4 +1,4 @@
-package abstractionConcepts;
+package Abstraction;
 
 /**
  * Main class to demonstrate the vehicle hierarchy.

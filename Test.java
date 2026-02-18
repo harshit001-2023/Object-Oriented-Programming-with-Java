@@ -1,28 +1,26 @@
-import java.util.*;
-
-class Main55 {
-    public static void main(String[] args) {
-        // Write your code here
-        Vehicle.displayCategory();
-        Car car = new Car();
-        car.startEngine();
-    }
-}
-
-abstract class Vehicle{
-    public Vehicle(){
-
-    }
-
-    public static void displayCategory(){
-        IO.println("This is a vehicle.");
-    }
-
-    abstract void startEngine();
-}
-
-class Car extends Vehicle{
-    void startEngine(){
-        IO.println("Car engine started.");
+class InnerTry
+{
+    public static void main(String[] args)
+    {
+        try
+        {
+            String s=null;
+            System.out.println(s.length());
+        }
+        catch (NullPointerException np)
+        {
+            System.out.println("Null Problem");
+            try
+            {
+                String s="xyz";
+                int no=Integer.parseInt(s);
+                System.out.println(no);
+            }
+            catch (NumberFormatException nf)
+            {
+                System.out.println("Number Format Problem");
+            }
+        }
+        System.out.println("Completed");
     }
 }
