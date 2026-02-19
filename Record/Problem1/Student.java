@@ -31,6 +31,7 @@ static void main() {
         }
 
         Arrays.sort(students, (m1, m2) -> Double.compare(m1.marks(), m2.marks()));
+        // Arrays.sort(students, (m1, m2) -> m1.name().compareTo(m2.name()));
 
         IO.println("Sorted Data: ");
         for(Student stu : students){
