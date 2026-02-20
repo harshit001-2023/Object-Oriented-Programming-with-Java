@@ -56,60 +56,98 @@ Parameter          : courseId of type integer
 Return Type        : void
 Access modifier    : public
 In this method write the logic so, student can take admission in the course based on the
-courseId*/
+courseId
 
-// Record for Course
+
+Take an ELC class StudentEnrollmentProcess with main method.
+In this class, create all the available courses, offers provided by the institute.
+Create Student object so student can view all courses, ongoing offers and take admission
+in the respective corse based on the course id.
+
+Test Cases :
+------------
+Case 1 :
+--------
+Enter student name: Ravishankar
+1 : Java : 35000.0
+2 : .Net : 30000.0
+3 : Python : 32000.0
+Special discount: Get 20% off on all courses!
+Limited time offer: Enroll in any two courses and get one course free!
+Enter course ID to enroll: 1
+Ravishankar enrolled in: Java
+
+Case 2 :
+---------
+Enter student name: Smith
+1 : Java : 35000.0
+2 : .Net : 30000.0
+3 : Python : 32000.0
+Special discount: Get 20% off on all courses!
+Limited time offer: Enroll in any two courses and get one course free!
+Enter course ID to enroll: 3
+Smith enrolled in: Python
+
+Case 3 :
+---------
+Enter student name: Alen
+1 : Java : 35000.0
+2 : .Net : 30000.0
+3 : Python : 32000.0
+Special discount: Get 20% off on all courses!
+Limited time offer: Enroll in any two courses and get one course free!
+Enter course ID to enroll: 4
+Course with ID 4 not found.*/
+
+// Record classes
+
+// Course record
 record Course(Integer id, String name, Double fee) {
-    // Compact constructor (no need to write explicitly)
+    // Compact constructor for validation if needed
 }
 
-// Record for Offer
+// Offer record
 record Offer(String offerText) {
-    // Compact constructor
+    // Compact constructor for validation if needed
 }
 
-// Record for EducationInstitute
+// EducationInstitute record
 record EducationInstitute(Course[] courses, Offer[] offers) {
 
     // Method to enroll student in a course based on courseId
     public void enrollStudentInCourse(int courseId, String studentName) {
-        boolean courseFound = false;
+        boolean found = false;
 
         for (Course course : courses) {
             if (course.id() == courseId) {
-                courseFound = true;
-                System.out.println("Enrolling " + studentName + " in course: " + course.name());
-                System.out.println("Course enrollment confirmed!");
+                System.out.println(studentName + " enrolled in: " + course.name());
+                found = true;
                 break;
             }
         }
 
-        if (!courseFound) {
-            System.out.println("Error: Course with ID " + courseId + " not found.");
+        if (!found) {
+            System.out.println("Course with ID " + courseId + " not found.");
         }
     }
 }
 
-// Record for Student
+// Student record
 record Student(String name, EducationInstitute institute) {
 
     // Method to view all courses and fees
     public void viewCoursesAndFees() {
-        System.out.println("Available Courses:");
         Course[] courses = institute.courses();
-
         for (Course course : courses) {
-            System.out.println(course.id() + ". " + course.name() + " - Fee: Rs." + course.fee());
+            System.out.println(course.id() + " : " + course.name() + " : " + course.fee());
         }
     }
 
     // Method to view all offers
     public void viewOffers() {
-        System.out.println("Ongoing Offers:");
         Offer[] offers = institute.offers();
-
         for (Offer offer : offers) {
-            System.out.println("- " + offer.offerText());
+            System.out.println(offer.offerText());
         }
     }
 
@@ -119,43 +157,43 @@ record Student(String name, EducationInstitute institute) {
     }
 }
 
-// ELC class for testing
-public class EducationInstituteSystem {
+// ELC class
+public class StudentEnrollmentProcess {
     public static void main(String[] args) {
-        // Create courses
+        // Create available courses
         Course[] courses = {
-                new Course(101, "Java Programming", 25000.0),
-                new Course(102, "Python Programming", 22000.0),
-                new Course(103, "Web Development", 28000.0),
-                new Course(104, "Data Science", 35000.0)
+                new Course(1, "Java", 35000.0),
+                new Course(2, ".Net", 30000.0),
+                new Course(3, "Python", 32000.0)
         };
 
-        // Create offers
+        // Create ongoing offers
         Offer[] offers = {
-                new Offer("Early Bird Discount: 10% off on all courses!"),
-                new Offer("Refer a Friend: Get 15% cashback!"),
-                new Offer("Weekend Special: Enroll in two courses, get 20% off on second course!")
+                new Offer("Special discount: Get 20% off on all courses!"),
+                new Offer("Limited time offer: Enroll in any two courses and get one course free!")
         };
 
-        // Create education institute
+        // Create education institute with courses and offers
         EducationInstitute institute = new EducationInstitute(courses, offers);
 
         // Read student name
+        System.out.print("Enter student name: ");
         String studentName = IO.readln();
 
         // Create student
         Student student = new Student(studentName, institute);
 
-        // Student views courses and offers
+        // Display courses
         student.viewCoursesAndFees();
-        System.out.println();
-        student.viewOffers();
-        System.out.println();
 
-        // Read course ID for enrollment
+        // Display offers
+        student.viewOffers();
+
+        // Read course ID to enroll
+        System.out.print("Enter course ID to enroll: ");
         int courseId = Integer.parseInt(IO.readln());
 
-        // Student enrolls in course
+        // Enroll student
         student.enrollInCourse(courseId);
     }
 }
