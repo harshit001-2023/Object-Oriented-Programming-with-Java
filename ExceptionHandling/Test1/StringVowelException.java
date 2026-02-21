@@ -1,4 +1,4 @@
-//2. StringVowelException
+package ExceptionHandling.Test1;//2. ExceptionHandling.Test1.StringVowelException
 //        Easy
 //100 points
 //• 125 min suggested

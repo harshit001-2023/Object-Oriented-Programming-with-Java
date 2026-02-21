@@ -1,4 +1,4 @@
-//3. ComparableWithArray
+package ExceptionHandling.Test1;//3. ExceptionHandling.Test1.ComparableWithArray
 //        Easy
 //100 points
 //• 125 min suggested
