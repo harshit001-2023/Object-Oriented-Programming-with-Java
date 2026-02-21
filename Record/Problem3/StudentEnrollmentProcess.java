@@ -161,20 +161,12 @@ record Student(String name, EducationInstitute institute) {
 public class StudentEnrollmentProcess {
     public static void main(String[] args) {
         // Create available courses
-        Course[] courses = {
-                new Course(1, "Java", 35000.0),
-                new Course(2, ".Net", 30000.0),
-                new Course(3, "Python", 32000.0)
-        };
-
-        // Create ongoing offers
-        Offer[] offers = {
-                new Offer("Special discount: Get 20% off on all courses!"),
-                new Offer("Limited time offer: Enroll in any two courses and get one course free!")
-        };
-
-        // Create education institute with courses and offers
-        EducationInstitute institute = new EducationInstitute(courses, offers);
+//        Course[] courses = {
+//                new Course(1, "Java", 35000.0),
+//                new Course(2, ".Net", 30000.0),
+//                new Course(3, "Python", 32000.0)
+//        };
+        EducationInstitute institute = getEducationInstitute();
 
         // Read student name
         System.out.print("Enter student name: ");
@@ -195,5 +187,23 @@ public class StudentEnrollmentProcess {
 
         // Enroll student
         student.enrollInCourse(courseId);
+    }
+
+    private static EducationInstitute getEducationInstitute() {
+        Course[] courses = {
+                new Course(1, "Java", 35000.0),
+                new Course(2, ".Net", 30000.0),
+                new Course(3, "Python", 32000.0)
+        };
+
+        // Create ongoing offers
+        Offer[] offers = {
+                new Offer("Special discount: Get 20% off on all courses!"),
+                new Offer("Limited time offer: Enroll in any two courses and get one course free!")
+        };
+
+        // Create education institute with courses and offers
+        // EducationInstitute institute = new EducationInstitute(courses, offers);
+        return new EducationInstitute(courses, offers);
     }
 }
