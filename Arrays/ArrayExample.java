@@ -1,0 +1,111 @@
+package Arrays;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
+public class ArrayExample{
+    static void main() {
+        int len = Integer.parseInt(IO.readln("Enter array size : "));
+        int [] arr = new int [len];
+        IO.println("Please enter the elements of the array: ");
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = Integer.parseInt(IO.readln("Index "+(i+1)+" : "));
+        }
+
+        IO.println("Original Array: ");
+        for(int i : arr){
+            System.out.print(i+",");
+        }
+
+
+//        IO.println("Modify Array: "+ Arrays.toString(arrayElementModification(arr)));
+//        IO.println("----------------------------------------------------------------");
+//        IO.println("Sorted Array: "+Arrays.toString(sortArray(arr)));
+//        IO.println("----------------------------------------------------------------");
+//        IO.println("Searched Element : "+searchElement(arr));
+        IO.println("----------------------------------------------------------------");
+//        IO.println("Duplicate elements : "+Arrays.toString(findDuplicates(arr)));
+//        IO.println("----------------------------------------------------------------");
+//        IO.println("Insertion Elements in the array: "+ Arrays.toString(insertElementToLastPosition(arr)));
+        IO.println("----------------------------------------------------------------");
+        IO.println("Element Insertion at Middle Position : "+Arrays.toString(insertElementTOMiddlePosition(arr)));
+        IO.println("----------------------------------------------------------------");
+
+
+    }
+
+    // Q1) WAP to modify the value of an array.[Change Array Element]
+    public static int[] arrayElementModification(int[] arr){
+        int element = Integer.parseInt(IO.readln("\nEnter which element to modify : "));
+        int elementToModify = Integer.parseInt(IO.readln("\nEnter element to modify : "));
+
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] == element){
+                arr[i] = elementToModify;
+            }
+        }
+        return arr;
+    }
+
+    // Q2) How to sort Array elements using nested for loop.
+    public static int[] sortArray(int[] arr){
+        for(int i = 0; i < arr.length; i++){
+            for(int j = i+1; j < arr.length; j++){
+                if(arr[i] > arr[j]){
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+
+//        Arrays.sort(arr);
+        return arr;
+    }
+
+    // Q3) WAP to search an element in the existing array.
+    public static int searchElement(int[] arr){
+        int elementTOSearch = Integer.parseInt(IO.readln("Enter element to be searched : "));
+        for(int i  = 0; i < arr.length; i++){
+            if(i == elementTOSearch){
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    // Q4) Find the duplicate elements in the Array and print the duplicate.
+    public static int[] findDuplicates(int[] arr){
+        for(int i = 0; i < arr.length; i++){
+            for(int j = i+1; j < arr.length; j++){
+                if(arr[i] == arr[j]){
+                    return new int[]{arr[i], arr[j]};
+                }
+            }
+        }
+        return null;
+    }
+
+    // Q5) Insert a new element in the array at last position
+    public static int[] insertElementToLastPosition(int[] arr){
+        int elementToInsert = Integer.parseInt(IO.readln("Please enter the element to be inserted to the last position : "));
+        int[] arr1 = new int[arr.length+1];
+        for(int i = 0; i < arr.length; i++){
+            arr1[i] = arr[i];
+        }
+        // System.arraycopy(arr,0,arr1,0,arr.length);
+        arr1[arr.length] = elementToInsert;
+
+        return arr1;
+    }
+
+    // Q6) Insert a new element in the array at middle position.
+    public static int[] insertElementTOMiddlePosition(int[] arr){
+        int elementToInsertIntoMiddlePosition = Integer.parseInt(IO.readln("Please enter the element to be inserted to the middle position : "));
+        int[] arr1 = new int[arr.length+1];
+        System.arraycopy(arr, 0, arr1, 0, arr.length);
+        arr1[arr.length/2] = elementToInsertIntoMiddlePosition;
+
+        return arr1;
+    }
+}

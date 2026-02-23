@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 // Write a program to create a stream with the elements of and ArayList and get the element which are greater
@@ -16,7 +15,7 @@ void main() {
     IO.println(convertListToArrayList(list, stream));
     IO.println("---------------------------");
     Stream<Integer> stream1 = list.stream();
-    IO.println(retreiveElementfromArrayList(list, stream1));
+    IO.println(retrieveElementFromArrayList(list, stream1));
 
 
 }
@@ -26,7 +25,7 @@ public static List<Integer> convertListToArrayList(List<Integer> list, Stream<In
     return list1;
 }
 
-public static Integer retreiveElementfromArrayList(List<Integer> list, Stream<Integer> stream) {
+public static Integer retrieveElementFromArrayList(List<Integer> list, Stream<Integer> stream) {
     Integer[] array = stream.filter(e -> e < 5).toArray(Integer[]::new);
     for(Integer i : array){
         return i;
