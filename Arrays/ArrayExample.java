@@ -5,31 +5,37 @@ import java.util.Arrays;
 
 public class ArrayExample{
     static void main() {
-        int len = Integer.parseInt(IO.readln("Enter array size : "));
-        int [] arr = new int [len];
-        IO.println("Please enter the elements of the array: ");
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = Integer.parseInt(IO.readln("Index "+(i+1)+" : "));
+        int[] arr = null;
+        try {
+            int len = Integer.parseInt(IO.readln("Enter array size : "));
+            arr = new int[len];
+            IO.println("Please enter the elements of the array: ");
+            for (int i = 0; i < arr.length; i++) {
+                arr[i] = Integer.parseInt(IO.readln("Index " + (i + 1) + " : "));
+            }
+
+            IO.println("Original Array: "+Arrays.toString(arr));
+
+//            IO.println("Modify Array: "+ Arrays.toString(arrayElementModification(arr)));
+//            IO.println("----------------------------------------------------------------");
+//            IO.println("Sorted Array: "+Arrays.toString(sortArray(arr)));
+//            IO.println("----------------------------------------------------------------");
+//            IO.println("Searched Element : "+searchElement(arr));
+//            IO.println("----------------------------------------------------------------");
+            IO.println("Duplicate elements : "+Arrays.toString(findAllDuplicates(arr)));
+//            IO.println("----------------------------------------------------------------");
+//            IO.println("Insertion Elements in the array: "+ Arrays.toString(insertElementToLastPosition(arr)));
+//            IO.println("----------------------------------------------------------------");
+//            IO.println("Element Insertion at Middle Position : "+Arrays.toString(insertElementTOMiddlePosition(arr)));
+//            IO.println("----------------------------------------------------------------");
+
+        } catch (NumberFormatException | NullPointerException e) {
+            System.err.println("Please Enter an integer! Only Integers are allowed.");
+            System.exit(0);
         }
 
-        IO.println("Original Array: ");
-        for(int i : arr){
-            System.out.print(i+",");
-        }
 
 
-//        IO.println("Modify Array: "+ Arrays.toString(arrayElementModification(arr)));
-//        IO.println("----------------------------------------------------------------");
-//        IO.println("Sorted Array: "+Arrays.toString(sortArray(arr)));
-//        IO.println("----------------------------------------------------------------");
-//        IO.println("Searched Element : "+searchElement(arr));
-        IO.println("----------------------------------------------------------------");
-//        IO.println("Duplicate elements : "+Arrays.toString(findDuplicates(arr)));
-//        IO.println("----------------------------------------------------------------");
-//        IO.println("Insertion Elements in the array: "+ Arrays.toString(insertElementToLastPosition(arr)));
-        IO.println("----------------------------------------------------------------");
-        IO.println("Element Insertion at Middle Position : "+Arrays.toString(insertElementTOMiddlePosition(arr)));
-        IO.println("----------------------------------------------------------------");
 
 
     }
@@ -75,15 +81,45 @@ public class ArrayExample{
     }
 
     // Q4) Find the duplicate elements in the Array and print the duplicate.
-    public static int[] findDuplicates(int[] arr){
-        for(int i = 0; i < arr.length; i++){
-            for(int j = i+1; j < arr.length; j++){
-                if(arr[i] == arr[j]){
-                    return new int[]{arr[i], arr[j]};
+    public static int[] findAllDuplicates(int[] arr) {
+        // First pass: count duplicates to determine array size
+        int duplicateCount = 0;
+        boolean[] counted = new boolean[arr.length];
+
+        for (int i = 0; i < arr.length; i++) {
+            if (counted[i]) continue;
+
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] == arr[j]) {
+                    duplicateCount++;
+                    counted[i] = true;
+                    break;
                 }
             }
         }
-        return null;
+
+        if (duplicateCount == 0) return new int[0];
+
+        // Second pass: collect duplicates
+        int[] duplicates = new int[duplicateCount];
+        int index = 0;
+        counted = new boolean[arr.length]; // Reset
+
+        for (int i = 0; i < arr.length; i++) {
+            if (counted[i]) continue;
+
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] == arr[j] && !counted[j]) {
+                    if (!counted[i]) {
+                        duplicates[index++] = arr[i];
+                        counted[i] = true;
+                    }
+                    counted[j] = true;
+                }
+            }
+        }
+
+        return duplicates;
     }
 
     // Q5) Insert a new element in the array at last position
@@ -101,10 +137,12 @@ public class ArrayExample{
 
     // Q6) Insert a new element in the array at middle position.
     public static int[] insertElementTOMiddlePosition(int[] arr){
-        int elementToInsertIntoMiddlePosition = Integer.parseInt(IO.readln("Please enter the element to be inserted to the middle position : "));
+        int elementToInsert = Integer.parseInt(IO.readln("Please enter the element to be inserted to the middle position : "));
         int[] arr1 = new int[arr.length+1];
-        System.arraycopy(arr, 0, arr1, 0, arr.length);
-        arr1[arr.length/2] = elementToInsertIntoMiddlePosition;
+        int mid = arr.length/2;
+        System.arraycopy(arr, 0, arr1, 0, mid);
+        arr1[mid] = elementToInsert;
+        System.arraycopy(arr, mid, arr1, mid+1, arr.length-mid);
 
         return arr1;
     }
