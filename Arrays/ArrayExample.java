@@ -29,7 +29,8 @@ public class ArrayExample{
 //            IO.println("Element Insertion at Middle Position : "+Arrays.toString(insertElementTOMiddlePosition(arr)));
 //            IO.println("----------------------------------------------------------------");
 //            IO.println("Duplicate Elements removed from array: "+Arrays.toString(removeDuplicateFromArray(arr)));
-            IO.println("Merged Array: "+Arrays.toString(mergeArrays(arr)));
+//            IO.println("Merged Array: "+Arrays.toString(mergeArrays(arr)));
+//            IO.println(Arrays.toString(uniqueElement(arr)));
 
 
         } catch (NumberFormatException | NullPointerException e) {
@@ -178,7 +179,7 @@ public class ArrayExample{
         return result;
     }
 
-    // Q2) Program to merge to array elements into a single array.
+    // Q8) Program to merge to array elements into a single array.
     public static int[] mergeArrays(int[] arr1){
         int n = Integer.parseInt(IO.readln("Please enter the number of elements in the new array : "));
         int[] arr2 = new int[n+arr1.length];
@@ -193,5 +194,9 @@ public class ArrayExample{
         System.arraycopy(arr1, 0, arr2, n, arr1.length);
         return arr2;
     }
+
+//    // Q3)  Finding the unique element in the array.
+//    public static int[] uniqueElement(int[] arr){
+//    }
 
 }
