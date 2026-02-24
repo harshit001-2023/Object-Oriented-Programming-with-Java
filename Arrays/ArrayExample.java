@@ -28,7 +28,9 @@ public class ArrayExample{
 //            IO.println("----------------------------------------------------------------");
 //            IO.println("Element Insertion at Middle Position : "+Arrays.toString(insertElementTOMiddlePosition(arr)));
 //            IO.println("----------------------------------------------------------------");
-            IO.println("Duplicate Elements removed from array: "+Arrays.toString(removeDuplicateFromArray(arr)));
+//            IO.println("Duplicate Elements removed from array: "+Arrays.toString(removeDuplicateFromArray(arr)));
+            IO.println("Merged Array: "+Arrays.toString(mergeArrays(arr)));
+
 
         } catch (NumberFormatException | NullPointerException e) {
             System.err.println("Please Enter an integer! Only Integers are allowed.");
@@ -176,5 +178,20 @@ public class ArrayExample{
         return result;
     }
 
+    // Q2) Program to merge to array elements into a single array.
+    public static int[] mergeArrays(int[] arr1){
+        int n = Integer.parseInt(IO.readln("Please enter the number of elements in the new array : "));
+        int[] arr2 = new int[n+arr1.length];
+        for(int i = 0; i < n; i++){
+            arr2[i] = Integer.parseInt(IO.readln("Index " + (i + 1) + " : "));
+        }
+        IO.println("2nd Array "+Arrays.toString(arr2));
+        // Copy existing array elements into remaining part
+//        for (int i = 0; i < arr1.length; i++) {
+//            arr2[n + i] = arr1[i];
+//        }
+        System.arraycopy(arr1, 0, arr2, n, arr1.length);
+        return arr2;
+    }
 
 }
