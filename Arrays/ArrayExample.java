@@ -22,12 +22,13 @@ public class ArrayExample{
 //            IO.println("----------------------------------------------------------------");
 //            IO.println("Searched Element : "+searchElement(arr));
 //            IO.println("----------------------------------------------------------------");
-            IO.println("Duplicate elements : "+Arrays.toString(findAllDuplicates(arr)));
+//            IO.println("Duplicate elements : "+Arrays.toString(findAllDuplicates(arr)));
 //            IO.println("----------------------------------------------------------------");
 //            IO.println("Insertion Elements in the array: "+ Arrays.toString(insertElementToLastPosition(arr)));
 //            IO.println("----------------------------------------------------------------");
 //            IO.println("Element Insertion at Middle Position : "+Arrays.toString(insertElementTOMiddlePosition(arr)));
 //            IO.println("----------------------------------------------------------------");
+            IO.println("Duplicate Elements removed from array: "+Arrays.toString(removeDuplicateFromArray(arr)));
 
         } catch (NumberFormatException | NullPointerException e) {
             System.err.println("Please Enter an integer! Only Integers are allowed.");
@@ -146,4 +147,34 @@ public class ArrayExample{
 
         return arr1;
     }
+
+    // Q7) WAP to Remove Duplicates from array.
+    public static int[] removeDuplicateFromArray(int[] arr){
+        int[] temp = new int[arr.length];
+        int j = 0;
+
+        for (int value : arr) {
+            boolean isDuplicate = false;
+
+            // Check if element already exists in temp
+            for (int k = 0; k < j; k++) {
+                if (value == temp[k]) {
+                    isDuplicate = true;
+                    break;
+                }
+            }
+
+            if (!isDuplicate) {
+                temp[j++] = value;
+            }
+        }
+
+        // Create result array with exact size
+        int[] result = new int[j];
+        System.arraycopy(temp, 0, result, 0, j);
+
+        return result;
+    }
+
+
 }
