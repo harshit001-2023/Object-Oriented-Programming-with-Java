@@ -1,38 +1,23 @@
 package Arrays;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Optional;
-import java.util.stream.Stream;
 
 public class ArrayExample {
     static void main() {
         int[] arr = null;
         try {
-            int len = Integer.parseInt(IO.readln("Enter array size : "));
-            arr = new int[len];
-            IO.println("Please enter the elements of the array: ");
-            for (int i = 0; i < arr.length; i++) {
-                arr[i] = Integer.parseInt(IO.readln("Index " + (i + 1) + " : "));
-            }
+//            int len = Integer.parseInt(IO.readln("Enter array size : "));
+//            arr = new int[len];
+//            IO.println("Please enter the elements of the array: ");
+//            for (int i = 0; i < arr.length; i++) {
+//                arr[i] = Integer.parseInt(IO.readln("Index " + (i + 1) + " : "));
+//            }
+//
+//            IO.println("Original Array: " + Arrays.toString(arr));
 
-            IO.println("Original Array: " + Arrays.toString(arr));
+            IO.println(testArrays());
 
-            // Test cases
-            int[][] testArrays = {
-                    {1, 2, 3, 4, 5},      // true
-                    {5, 5, 5, 5},         // true
-                    {1, 3, 2, 4},         // false
-                    {10, 8, 6},           // false
-                    {},                    // true
-                    {42},                  // true
-                    {50, 20, 30, 10}
-            };
-
-            for (int[] i : testArrays) {
-                System.out.println(Arrays.toString(i) + " -> " +
-                        isArrayIncreasingOrder(i));
-            }
 
 //            IO.println("Modify Array: "+ Arrays.toString(arrayElementModification(arr)));
 //            IO.println("----------------------------------------------------------------");
@@ -58,6 +43,26 @@ public class ArrayExample {
         }
 
 
+    }
+
+    public static String testArrays() {
+        // Test cases
+        int[][] testArrays = {
+                {1, 2, 3, 4, 5},      // true
+                {5, 5, 5, 5},         // true
+                {1, 3, 2, 4},         // false
+                {10, 8, 6},           // false
+                {},                    // true
+                {42},                  // true
+                {50, 20, 30, 10}
+        };
+
+        for (int[] array : testArrays) {
+//            return Arrays.toString(array) + " -> " + isArrayIncreasingOrder(array);
+            return Arrays.toString(array) + " -> " + searchElement(array);
+        }
+
+        return null;
     }
 
     // Q1) WAP to modify the value of an array.[Change Array Element]
