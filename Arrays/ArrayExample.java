@@ -31,6 +31,7 @@ public class ArrayExample{
 //            IO.println("Duplicate Elements removed from array: "+Arrays.toString(removeDuplicateFromArray(arr)));
 //            IO.println("Merged Array: "+Arrays.toString(mergeArrays(arr)));
 //            IO.println(Arrays.toString(uniqueElement(arr)));
+            IO.println(secondLargest(arr));
 
 
         } catch (NumberFormatException | NullPointerException e) {
@@ -195,8 +196,16 @@ public class ArrayExample{
         return arr2;
     }
 
-//    // Q3)  Finding the unique element in the array.
+//    // Q9)  Finding the unique element in the array.
 //    public static int[] uniqueElement(int[] arr){
 //    }
+
+    // Q10) Find second-largest element in array
+    public static int secondLargest(int[] arr){
+        // For non duplicates element
+        Arrays.sort(arr);
+
+        return arr[arr.length - 2];
+    }
 
 }
