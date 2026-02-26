@@ -7,16 +7,16 @@ public class ArrayExample {
     static void main() {
         int[] arr = null;
         try {
-//            int len = Integer.parseInt(IO.readln("Enter array size : "));
-//            arr = new int[len];
-//            IO.println("Please enter the elements of the array: ");
-//            for (int i = 0; i < arr.length; i++) {
-//                arr[i] = Integer.parseInt(IO.readln("Index " + (i + 1) + " : "));
-//            }
-//
-//            IO.println("Original Array: " + Arrays.toString(arr));
+            int len = Integer.parseInt(IO.readln("Enter array size : "));
+            arr = new int[len];
+            IO.println("Please enter the elements of the array: ");
+            for (int i = 0; i < arr.length; i++) {
+                arr[i] = Integer.parseInt(IO.readln("Index " + (i + 1) + " : "));
+            }
 
-            IO.println(testArrays());
+            IO.println("Original Array: " + Arrays.toString(arr));
+
+//            IO.println(testArrays());
 
 
 //            IO.println("Modify Array: "+ Arrays.toString(arrayElementModification(arr)));
@@ -35,6 +35,7 @@ public class ArrayExample {
 //            IO.println("Merged Array: "+Arrays.toString(mergeArrays(arr)));
 //            IO.println(Arrays.toString(uniqueElement(arr)));
 //            IO.println(secondLargest(arr));
+            IO.println(Arrays.toString(reverseArray(arr)));
 
 
         } catch (NumberFormatException | NullPointerException e) {
@@ -44,6 +45,18 @@ public class ArrayExample {
 
 
     }
+
+    /*Q2) Given an array of N integers, left rotate the array by one place.?
+    Input : 1,2,3,4,5
+    Output :2 3 4 5 1
+
+Q3) You are given an array of integers, your task is to move all the zeros in the array to       the end.
+    Input : [0, 1, 3, 4, 0, 9, 5]
+    Output : [1, 3, 4, 9, 5, 0, 0]
+
+Q4) Given an array that contains only 1 and 0 return the count of maximum consecutive ones in     the array?
+    Input : 1,1,0,1,1,1,1
+    Output : Maximum Consecutive Ones: 4*/
 
     public static String testArrays() {
         // Test cases
@@ -59,7 +72,8 @@ public class ArrayExample {
 
         for (int[] array : testArrays) {
 //            return Arrays.toString(array) + " -> " + isArrayIncreasingOrder(array);
-            return Arrays.toString(array) + " -> " + searchElement(array);
+//            return Arrays.toString(array) + " -> " + searchElement(array);
+            return Arrays.toString(array) + " -> " + Arrays.toString(reverseArray(array));
         }
 
         return null;
@@ -280,5 +294,17 @@ public class ArrayExample {
             }
         }
         return true;
+    }
+
+    // Q2) Given an array of N integers, left rotate the array by one place.?
+    //    Input : 1,2,3,4,5
+    //    Output :2 3 4 5 1
+    public static int[] reverseArray(int[] arr) {
+        for(int i = 0, j = arr.length - 1; i < j; i++, j--){
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+        return arr;
     }
 }
