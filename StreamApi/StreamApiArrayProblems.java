@@ -26,7 +26,7 @@ public class StreamApiArrayProblems {
         IO.println("Unique Numbers"+Arrays.toString(uniqueNumbers(arr)));
         IO.println("Palindrome string: "+ Arrays.toString(palindromeStrings(words)));
         IO.println("String: num format :"+Arrays.toString(arrayToStringRepresentation(arr)));
-        IO.println("Boolean to Yes and No: "+Arrays.toString(convertBooleanToYesOrNo(flags)));
+//        IO.println("Boolean to Yes and No: "+Arrays.toString(convertBooleanToYesOrNo(flags)));
         IO.println("String to UpperCase: "+Arrays.toString(stringToUppercase(words)));
         IO.println("First Letter of String "+Arrays.toString(stringFirstLetter(words)));
     }
