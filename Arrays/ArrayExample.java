@@ -35,7 +35,8 @@ public class ArrayExample {
 //            IO.println("Merged Array: "+Arrays.toString(mergeArrays(arr)));
 //            IO.println(Arrays.toString(uniqueElement(arr)));
 //            IO.println(secondLargest(arr));
-            IO.println(Arrays.toString(reverseArray(arr)));
+//            IO.println(Arrays.toString(reverseArray(arr)));
+            IO.println(Arrays.toString(moveZeroToArrayEnd(arr)));
 
 
         } catch (NumberFormatException | NullPointerException e) {
@@ -46,13 +47,8 @@ public class ArrayExample {
 
     }
 
-    /*Q2) Given an array of N integers, left rotate the array by one place.?
-    Input : 1,2,3,4,5
-    Output :2 3 4 5 1
+    /*
 
-Q3) You are given an array of integers, your task is to move all the zeros in the array to       the end.
-    Input : [0, 1, 3, 4, 0, 9, 5]
-    Output : [1, 3, 4, 9, 5, 0, 0]
 
 Q4) Given an array that contains only 1 and 0 return the count of maximum consecutive ones in     the array?
     Input : 1,1,0,1,1,1,1
@@ -305,6 +301,39 @@ Q4) Given an array that contains only 1 and 0 return the count of maximum consec
             arr[i] = arr[j];
             arr[j] = temp;
         }
+        return arr;
+    }
+
+//    Q3) You are given an array of integers, your task is to move all the zeros in the array to       the end.
+//    Input : [0, 1, 3, 4, 0, 9, 5]
+//    Output : [1, 3, 4, 9, 5, 0, 0]
+    public static int[] moveZeroToArrayEndWithNewArray(int[] arr) {
+        // With new Array
+        int[] newArr = new int[arr.length];
+        int index = 0;
+        for (int j : arr) {
+            if (j != 0) {
+                newArr[index++] = j;
+            }
+        }
+        return newArr;
+    }
+
+    public static int[] moveZeroToArrayEnd(int[] arr) {
+        int nonZeroIndex = 0;
+
+        // Move all non-zero elements to front
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] != 0) {
+                arr[nonZeroIndex++] = arr[i];
+            }
+        }
+
+        // Fill remaining positions with zeros
+        while (nonZeroIndex < arr.length) {
+            arr[nonZeroIndex++] = 0;
+        }
+
         return arr;
     }
 }
