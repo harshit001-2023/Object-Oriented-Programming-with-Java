@@ -1,4 +1,4 @@
-/*MaximumElementJaggedArray
+package Arrays.ArrayTasks;/*Arrays.ArrayTasks.MaximumElementJaggedArray
 Medium
 Core Java • Array • Jagged Array
 50 Points
