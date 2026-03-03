@@ -1,4 +1,4 @@
-/*InputAndPrintMatrix
+package Arrays.ArrayTasks;/*InputAndPrintMatrix
 Easy
 Core Java • Array • 2D Array
 20 Points
