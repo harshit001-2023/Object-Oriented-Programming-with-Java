@@ -158,11 +158,11 @@ record Book(int id, String title, String author) {}
 
 class Library {
 
-    // Display all available books with exact formatting
+    // Display all available books
     public void displayAvailableBooks(Vector<Book> books) {
         System.out.println("Available Books in the Library :");
         for(Book book : books) {
-            System.out.println("  " + book); // Two spaces prefix as per test case
+            System.out.println("  " + book);
         }
     }
 
@@ -170,7 +170,7 @@ class Library {
     public void issueBook(Vector<Book> books, Scanner scanner) {
         System.out.print("\nEnter Book id which for Book issue :");
         int idToIssue = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
 
         boolean found = false;
         for (int i = 0; i < books.size(); i++) {
