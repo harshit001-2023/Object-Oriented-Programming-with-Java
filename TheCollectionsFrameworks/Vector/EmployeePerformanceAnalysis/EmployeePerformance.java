@@ -127,6 +127,7 @@ class EmployeePerformanceAnalysis {
         employeeSalary = new Vector<>();
     }
 
+    // Method for taking input data
     public void inputData() {
         for (int i = 0; i < n; i++) {
             String name = scanner.nextLine();
@@ -138,6 +139,7 @@ class EmployeePerformanceAnalysis {
         }
     }
 
+    // Method to Calculate Average Salary of an employee
     public void calculateAverageSalary() {
         double sum = 0;
         for (double salary : employeeSalary) {
@@ -146,6 +148,7 @@ class EmployeePerformanceAnalysis {
         averageSalary = sum / n;
     }
 
+    // Method for Displaying Top Earners
     public void displayTopEarners(int topN) {
         System.out.println("\nTop " + topN + " highest-paid employees:");
         int limit = Math.min(topN, n);
