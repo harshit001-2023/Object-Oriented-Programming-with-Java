@@ -158,6 +158,7 @@ class EmployeePerformanceAnalysis {
         }
     }
 
+    // Method for Display below Average employees information
     public void displayBelowAverageEmployees(double avgSalary) {
         System.out.println("\nEmployees earning below average salary (" +String.format("%.2f", avgSalary) + "):");
 
@@ -168,6 +169,7 @@ class EmployeePerformanceAnalysis {
         }
     }
 
+    // Method for Sorting Employees according to their Salary
     public void sortEmployeeBySalary() {
         // Bubble sort in descending order
         for (int i = 0; i < n - 1; i++) {
