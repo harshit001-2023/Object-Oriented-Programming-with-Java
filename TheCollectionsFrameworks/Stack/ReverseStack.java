@@ -51,20 +51,28 @@ Reversed Stack: [40, 30, 20, 10]*/
 import java.util.Stack;
 
 void main(){
+    // Created a Stack
     Stack<Integer> stack = new Stack<>();
+    // Taking length for stack
     int len = Integer.parseInt(IO.readln());
 
+    // taking array element from user and pushing them to array
     for (int i = 0; i < len; i++) {
         stack.push(Integer.parseInt(IO.readln()));
     }
-    IO.println("Original Stack: "+stack);
-    IO.println("Reversed Stack: " + reverseStack(stack, len));
+    IO.println("Original Stack: "+stack); // Printing original Stack
+    IO.println("Reversed Stack: " + reverseStack(stack, len)); // Printing new Stack from reverseStack method
 }
 
+// Creating a static method returning a new Stack, taking user stack and length as parameter
 public static Stack<Integer> reverseStack(Stack<Integer> stack, int len) {
+    // Creating a Stack
     Stack<Integer> temp = new Stack<>();
+    // For loop iterating up to length
     for (int i = 0; i < len; i++) {
+        // Simultaneously popping element from given stack and pushing to new temp Stack
         temp.push(stack.pop());
     }
-    return temp;
+
+    return temp; // Returning Temporary Reversed Stack
 }
