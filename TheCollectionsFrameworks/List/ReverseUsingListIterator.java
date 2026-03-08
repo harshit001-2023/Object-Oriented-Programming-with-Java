@@ -45,22 +45,27 @@ import java.util.ListIterator;
 
 void main(){
 
+    // Creating an ArrayList of String
     ArrayList<String> list = new ArrayList<>();
+    // Adding four elements as per the instructions
     list.add(IO.readln());
     list.add(IO.readln());
     list.add(IO.readln());
     list.add(IO.readln());
 
     IO.println("ATM Mini Statement (Latest First):");
-    TransactionHistory.displayReverse(list);
+    TransactionHistory.displayReverse(list); // Calling displayReverse method from TransactionHistory class
 
 }
 
 
 static class TransactionHistory {
     public static void displayReverse(ArrayList<String> list) {
+        // Created a new ListIterator of type String of size of list
         ListIterator<String> iterator = list.listIterator(list.size());
+        // Using while loop, checking for previous element
         while (iterator.hasPrevious()) {
+            // Moving pointer to previous element and printing it
             IO.println(iterator.previous());
         }
     }
