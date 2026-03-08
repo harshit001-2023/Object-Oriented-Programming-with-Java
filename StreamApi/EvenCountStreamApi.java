@@ -31,17 +31,23 @@ Number of even numbers: 3
 import java.util.ArrayList;
 
 void main(){
+
+    // Created New ArrayList of Integer type
     ArrayList<Integer> list = new ArrayList<>();
 
-    int len = Integer.parseInt(IO.readln());
+    int len = Integer.parseInt(IO.readln()); // Taking length
     for(int i = 0; i < len; i++){
+        // Adding elements to the list from user
         list.add(Integer.parseInt(IO.readln()));
     }
 
+    // Printing original arraylist
     IO.println("ArrayList Elements: "+list);
 
+    // Applying logic for Counting Even numbers using Stream Api concepts
     long newList = list.stream().filter(i -> i%2==0).count();
 
+    //Printing new list with Even numbers
     IO.println("Number of even numbers: "+newList);
 
 }
