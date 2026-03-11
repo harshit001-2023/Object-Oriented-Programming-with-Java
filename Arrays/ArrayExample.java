@@ -336,4 +336,18 @@ Q4) Given an array that contains only 1 and 0 return the count of maximum consec
 
         return arr;
     }
+
+    public static int secondLargestElement(int[] arr) {
+        int largest = -1, secondLargest = -1;
+
+        for (int j : arr) {
+            if (j > largest) {
+                secondLargest = largest;
+                largest = j;
+            } else if (j > secondLargest && j != largest) {
+                secondLargest = j;
+            }
+        }
+        return secondLargest;
+    }
 }

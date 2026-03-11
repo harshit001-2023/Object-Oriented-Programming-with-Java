@@ -96,20 +96,17 @@ Average salary is calculated and employees below average are displayed.
 import java.util.*;
 
 public class EmployeePerformance {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        EmployeePerformanceAnalysis analysis = new EmployeePerformanceAnalysis(scanner);
+    static void main() {
+        EmployeePerformanceAnalysis analysis = new EmployeePerformanceAnalysis();
 
-        analysis.n = scanner.nextInt();
-        scanner.nextLine(); // consume the newline
+        analysis.n = Integer.parseInt(IO.readln("Enter number of employees: "));
+        IO.println(); // consume the newline
 
         analysis.inputData();
         analysis.calculateAverageSalary();
         analysis.sortEmployeeBySalary();
         analysis.displayTopEarners(3);
         analysis.displayBelowAverageEmployees(analysis.averageSalary);
-
-        scanner.close();
     }
 }
 
@@ -118,11 +115,9 @@ class EmployeePerformanceAnalysis {
     Vector<Double> employeeSalary;
     int n;
     double averageSalary;
-    Scanner scanner; // Single scanner instance
 
     // Constructor with Scanner parameter
-    public EmployeePerformanceAnalysis(Scanner scanner) {
-        this.scanner = scanner;
+    public EmployeePerformanceAnalysis() {
         employeeNames = new Vector<>();
         employeeSalary = new Vector<>();
     }
@@ -130,11 +125,11 @@ class EmployeePerformanceAnalysis {
     // Method for taking input data
     public void inputData() {
         for (int i = 0; i < n; i++) {
-            String name = scanner.nextLine();
+            String name = IO.readln("Enter employee name: ");
             employeeNames.add(name);
 
-            double salary = scanner.nextDouble();
-            scanner.nextLine(); // consume the newline
+            double salary = Double.parseDouble(IO.readln("Enter employee salary: "));
+            IO.println(); // consume the newline
             employeeSalary.add(salary);
         }
     }
@@ -150,21 +145,21 @@ class EmployeePerformanceAnalysis {
 
     // Method for Displaying Top Earners
     public void displayTopEarners(int topN) {
-        System.out.println("\nTop " + topN + " highest-paid employees:");
+        IO.println("\nTop " + topN + " highest-paid employees:");
         int limit = Math.min(topN, n);
 
         for (int i = 0; i < limit; i++) {
-            System.out.println(employeeNames.get(i) + " - " + employeeSalary.get(i));
+            IO.println(employeeNames.get(i) + " - " + employeeSalary.get(i));
         }
     }
 
     // Method for Display below Average employees information
     public void displayBelowAverageEmployees(double avgSalary) {
-        System.out.println("\nEmployees earning below average salary (" +String.format("%.2f", avgSalary) + "):");
+        IO.println("\nEmployees earning below average salary (" +String.format("%.2f", avgSalary) + "):");
 
         for (int i = 0; i < n; i++) {
             if (employeeSalary.get(i) < avgSalary) {
-                System.out.println(employeeNames.get(i));
+                IO.println(employeeNames.get(i));
             }
         }
     }

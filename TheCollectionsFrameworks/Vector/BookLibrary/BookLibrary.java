@@ -103,33 +103,12 @@ class Book {
         return title;
     }
 
-    public String getAuthor() {
-        return author;
-    }
-
     public long getIsbn() {
         return isbn;
     }
 
     public double getPrice() {
         return price;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    // Setters
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    public void setIsbn(long isbn) {
-        this.isbn = isbn;
     }
 
     public void setPrice(double price) {
