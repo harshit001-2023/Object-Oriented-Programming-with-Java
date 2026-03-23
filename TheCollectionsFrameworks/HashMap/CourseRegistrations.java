@@ -74,58 +74,66 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
 
+import java.util.*;
+
 public class CourseRegistrations {
     public static void main(String[] args) {
+        // Map to store Course Name as key and a List of Student Names as the value
         HashMap<String, List<String>> studentCourse = new HashMap<>();
 
-        List<String> studentName = new ArrayList<>();
         int choice;
-        do{
+        do {
             IO.println("--- Course Registration Menu ---");
             IO.println("1. Register student to course [use V computeIfAbsent(key, Function<T,R>)]");
             IO.println("2. Remove student from course [use V computeIfPresent(key, BiFunction<T,U,R>)]");
             IO.println("3. View course-wise student list");
             IO.println("4. Exit");
             IO.println();
-            try{
-                choice = Integer.parseInt(IO.readln("Enter your choice: "));
 
+            try {
+                choice = Integer.parseInt(IO.readln("Enter your choice: "));
 
                 switch (choice) {
                     case 1:
                         String stName = IO.readln("Enter student name: ");
                         String courseName = IO.readln("Enter course name: ");
 
+                        // If the course doesn't exist, create a new ArrayList.
+                        // Then, add the student name to the list associated with that course.
                         studentCourse.computeIfAbsent(courseName, key -> new ArrayList<>()).add(stName);
                         break;
+
                     case 2:
                         String removeStudent = IO.readln("Enter student name: ");
                         String courseToEdit = IO.readln("Enter course name: ");
 
-//                studentCourse.computeIfPresent(courseToEdit, (key, oldVal) -> {
-//                    oldVal.remove(removeStudent);
-//                    return oldVal; // Return the modified list to keep it in the map
-//                });
-                        Objects.requireNonNull(studentCourse.computeIfPresent(courseToEdit, (K, V) -> V)).remove(removeStudent);
+                        // computeIfPresent checks if the course exists.
+                        // If it does, it returns the list (V), and we immediately call .remove() on it.
+                        // Objects.requireNonNull prevents a crash if the course key isn't found.
+                        Objects.requireNonNull(studentCourse.computeIfPresent(courseToEdit, (K, V) -> V))
+                                .remove(removeStudent);
                         break;
+
                     case 3:
+                        // Iterate through the map and print each course with its registered students
                         for (String key : studentCourse.keySet()) {
                             IO.println(key + " : " + studentCourse.get(key));
                         }
                         break;
+
                     case 4:
                         IO.println("System exited...");
                         System.exit(0);
                         break;
+
                     default:
                         IO.println("Invalid choice.");
                 }
             } catch (NumberFormatException | NullPointerException e) {
+                // Catches non-integer inputs or attempts to remove students from non-existent courses
                 System.err.println("Enter suitable value...");
             }
 
         } while (true);
-
     }
-
 }
