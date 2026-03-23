@@ -69,69 +69,76 @@ Enter your choice: 4
 Exiting Course Registration System.
 */
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Objects;
-
 import java.util.*;
 
 public class CourseRegistrations {
     public static void main(String[] args) {
-        // Map to store Course Name as key and a List of Student Names as the value
+        // Map: Key = Course Name (String), Value = List of Students (ArrayList)
         HashMap<String, List<String>> studentCourse = new HashMap<>();
 
         int choice;
         do {
-            IO.println("--- Course Registration Menu ---");
-            IO.println("1. Register student to course [use V computeIfAbsent(key, Function<T,R>)]");
-            IO.println("2. Remove student from course [use V computeIfPresent(key, BiFunction<T,U,R>)]");
+            IO.println("\n--- Course Registration Menu ---");
+            IO.println("1. Register student to course");
+            IO.println("2. Remove student from course");
             IO.println("3. View course-wise student list");
             IO.println("4. Exit");
-            IO.println();
 
             try {
-                choice = Integer.parseInt(IO.readln("Enter your choice: "));
+                choice = Integer.parseInt(IO.readln("\nEnter your choice: "));
 
                 switch (choice) {
                     case 1:
                         String stName = IO.readln("Enter student name: ");
                         String courseName = IO.readln("Enter course name: ");
 
-                        // If the course doesn't exist, create a new ArrayList.
-                        // Then, add the student name to the list associated with that course.
-                        studentCourse.computeIfAbsent(courseName, key -> new ArrayList<>()).add(stName);
+                        // computeIfAbsent: If the course key doesn't exist, it runs the mapping function
+                        // (creates a new ArrayList), puts it in the map, and then we add the student.
+                        studentCourse.computeIfAbsent(courseName, k -> new ArrayList<>()).add(stName);
+                        IO.println("Student added successfully.");
                         break;
 
                     case 2:
                         String removeStudent = IO.readln("Enter student name: ");
                         String courseToEdit = IO.readln("Enter course name: ");
 
-                        // computeIfPresent checks if the course exists.
-                        // If it does, it returns the list (V), and we immediately call .remove() on it.
-                        // Objects.requireNonNull prevents a crash if the course key isn't found.
-                        Objects.requireNonNull(studentCourse.computeIfPresent(courseToEdit, (K, V) -> V))
-                                .remove(removeStudent);
+                        // Check if the course exists first to avoid NullPointerExceptions
+                        if (studentCourse.containsKey(courseToEdit)) {
+                            // computeIfPresent: If the key exists, it provides the current list (v).
+                            // We remove the student from that list.
+                            studentCourse.computeIfPresent(courseToEdit, (k, v) -> {
+                                if (v.remove(removeStudent)) {
+                                    IO.println("Student removed.");
+                                } else {
+                                    IO.println("Student not found in this course.");
+                                }
+                                return v; // Keep the list in the map
+                            });
+                        } else {
+                            IO.println("Error: Course '" + courseToEdit + "' does not exist.");
+                        }
                         break;
 
                     case 3:
-                        // Iterate through the map and print each course with its registered students
-                        for (String key : studentCourse.keySet()) {
-                            IO.println(key + " : " + studentCourse.get(key));
+                        if (studentCourse.isEmpty()) {
+                            IO.println("No registrations found.");
+                        } else {
+                            // Standard iteration over the Map entries
+                            studentCourse.forEach((course, students) -> {
+                                IO.println(course + " : " + students);
+                            });
                         }
                         break;
 
                     case 4:
-                        IO.println("System exited...");
-                        System.exit(0);
-                        break;
+                        IO.println("Exiting system...");
+                        return; // Cleaner than System.exit(0) in a main method
 
                     default:
-                        IO.println("Invalid choice.");
+                        IO.println("Invalid choice. Please try again.");
                 }
-            } catch (NumberFormatException | NullPointerException e) {
-                // Catches non-integer inputs or attempts to remove students from non-existent courses
-                System.err.println("Enter suitable value...");
+            } catch (NumberFormatException e) {
+                IO.println("Input Error: Please enter a valid number for the menu choice.");
             }
 
         } while (true);
