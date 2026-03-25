@@ -61,5 +61,80 @@ Constraints
 Course ID must be a positive integer. Course name must not be null or empty.
 Null keys and null values are not allowed.*/
 
+import java.util.*;
+
+class Course {
+    private int courseId;
+    private String courseName;
+
+    public Course(int courseId, String courseName) {
+        this.courseId = courseId;
+        this.courseName = courseName;
+    }
+
+    @Override
+    public String toString() {
+        return "Course ID: " + courseId + ", Course Name: " + courseName;
+    }
+}
+
 public class CourseEnrollmentSyncMap {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Create synchronized map
+        Map<Integer, Course> syncMap = Collections.synchronizedMap(new HashMap<>());
+
+        if (scanner.hasNextInt()) {
+            int n = scanner.nextInt();
+
+            for (int i = 0; i < n; i++) {
+                if (scanner.hasNextInt()) {
+                    int courseId = scanner.nextInt();
+                    if(courseId < 0) {
+                        IO.println("Invalid course ID");
+                        System.exit(0);
+                    }
+                    scanner.nextLine(); // CRITICAL: Consume the leftover newline (\n)
+
+                    String courseName = scanner.nextLine(); // Read full name with spaces
+                    syncMap.put(courseId, new Course(courseId, courseName));
+                }
+            }
+        }
+
+
+        // Display all records
+        displayAllRecords(syncMap);
+
+        // Retrieve a course
+        if (scanner.hasNextInt()) {
+            int courseIdToRetrieve = scanner.nextInt();
+            retrieveCourse(syncMap, courseIdToRetrieve);
+        } else {
+            // Handle cases where non-numeric input is provided for retrieval
+            System.out.println("Invalid course ID.");
+        }
+
+        scanner.close();
+    }
+
+    public static void displayAllRecords(Map<Integer, Course> map) {
+        // Iterating over a synchronized map must be done inside a synchronized block
+        synchronized (map) {
+            for (Course course : map.values()) {
+                System.out.println(course);
+            }
+        }
+    }
+
+    public static void retrieveCourse(Map<Integer, Course> map, int id) {
+        Course course = map.get(id);
+        if (course != null) {
+            System.out.println(course);
+        } else {
+            // Test Case 3 logic: If ID is invalid/not found
+            System.out.println("Course with ID " + id + " not found.");
+        }
+    }
 }
