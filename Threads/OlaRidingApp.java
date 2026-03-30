@@ -117,10 +117,10 @@ class FareCalculation extends Thread{
 class LiveTracking extends Thread{
     @Override
     public void run(){
-        for(int i = 0; i <= 5; i++){
+        for(int i = 1; i <= 5; i++){
             System.out.println("Updating ride location... "+i*20+"% completed");
             try {
-                sleep(500);
+                sleep(10*100);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
