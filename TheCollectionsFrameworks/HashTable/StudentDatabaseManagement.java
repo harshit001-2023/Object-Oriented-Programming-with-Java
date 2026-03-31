@@ -1,4 +1,4 @@
-/*Create a Scenario based program on Student Management System using HashMap where we need to Add Student, Update Marks, Delete Student, Search Student, Display All Students, Show Lowest Scorer, Show Total and Average Marks.
+package TheCollectionsFrameworks.HashTable;/*Create a Scenario based program on Student Management System using HashMap where we need to Add Student, Update Marks, Delete Student, Search Student, Display All Students, Show Lowest Scorer, Show Total and Average Marks.
 
 Coding Requirements :
 ---------------------
