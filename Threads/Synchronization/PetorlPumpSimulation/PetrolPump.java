@@ -1,4 +1,4 @@
-package Threads.Synchronization;
+package Threads.Synchronization.PetorlPumpSimulation;
 
 public class PetrolPump {
 
