@@ -69,8 +69,11 @@ class Account {
     private int balance = 0;
 
     public synchronized void withdraw(int amount) {
-        while (balance >= amount) {
-            IO.println("Wait for balance");
+        // Fix: Check if balance is less than withdrawal amount
+        while (balance < amount) {
+            System.out.println(Thread.currentThread().getName() +
+                    " - Insufficient balance: " + balance +
+                    ". Waiting for deposit of " + amount);
             try {
                 wait();
             } catch (InterruptedException e) {
@@ -79,21 +82,26 @@ class Account {
         }
 
         balance -= amount;
-        IO.println("Account withdrawn: " + amount);
-        IO.println("Account balance: " + balance);
-        notify();
+        System.out.println(Thread.currentThread().getName() +
+                " - Withdrawn: " + amount);
+        System.out.println(Thread.currentThread().getName() +
+                " - Current balance: " + balance);
+        System.out.println("-----------------------------------");
+        notify(); // Notify depositor that withdrawal is done
     }
 
     public synchronized void deposit(int amount) {
-
         balance += amount;
-        IO.println("Account deposited: " + amount);
-        IO.println("Account balance: " + balance);
-        notify();
+        System.out.println(Thread.currentThread().getName() +
+                " - Deposited: " + amount);
+        System.out.println(Thread.currentThread().getName() +
+                " - Current balance: " + balance);
+        System.out.println("-----------------------------------");
+        notify(); // Notify withdrawer that balance is updated
     }
 }
 
-class Drawer extends Thread{
+class Drawer extends Thread {
     private Account account;
 
     public Drawer(Account account) {
@@ -102,13 +110,13 @@ class Drawer extends Thread{
 
     @Override
     public void run() {
-        int[] arr = {200, 300, 500, 100};
-        for(int i : arr){
-            account.withdraw(i);
+        int[] withdrawals = {200, 300, 500, 100};
+        for (int amount : withdrawals) {
+            account.withdraw(amount);
             try {
-                wait(1000);
+                Thread.sleep(1000); // Fixed: Use Thread.sleep instead of wait
             } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
         }
     }
@@ -123,18 +131,15 @@ class Depositor extends Thread {
 
     @Override
     public void run() {
-        int[] arr = {5500, 1500, 1000, 200};
-
-        for (int i : arr){
-            account.deposit(i);
-            IO.println("Deposited " + arr[i]);
-            try{
-                wait(1000);
+        int[] deposits = {5500, 1500, 1000, 200};
+        for (int amount : deposits) {
+            account.deposit(amount);
+            try {
+                Thread.sleep(1000); // Fixed: Use Thread.sleep instead of wait
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
-
     }
 }
 
@@ -145,10 +150,20 @@ public class ATMMachine {
         Drawer drawer = new Drawer(account);
         Depositor depositor = new Depositor(account);
 
-        drawer.setName("Drawer 1");
-        depositor.setName("Depositor 1");
+        drawer.setName("Drawer Thread");
+        depositor.setName("Depositor Thread");
 
         drawer.start();
         depositor.start();
+
+        // Optional: Wait for threads to complete
+        try {
+            drawer.join();
+            depositor.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("ATM Transaction Completed!");
     }
 }
