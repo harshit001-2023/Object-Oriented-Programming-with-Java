@@ -88,7 +88,7 @@ package Threads.InterThreadCommunication.RestaurantManagement;
 //Chef: fried chicken is ready!
 //Waiter: Serving the fried chicken
 
-class Restaurant extends Thread{
+class Restaurant {
     private String name;
     private String order;
     private boolean isOrderReady = false;
@@ -103,24 +103,30 @@ class Restaurant extends Thread{
 
     public synchronized void placeOrder(String order){
         this.order=order;
+        System.out.println("Waiter: Placed order for " + order);
 
         try {
             while(!isOrderReady){
                 wait();
             }
-            IO.println("Placed order for "+name);
+            System.out.println("Waiter: Serving the " + order);
         } catch (InterruptedException e){
             e.printStackTrace();
         }
     }
 
     public synchronized void prepareOrder(){
-        if(!isOrderReady){
-            IO.println("Preparing order for "+name);
-            isOrderReady=true;
-            notify();
+        System.out.println("Chef: Preparing " + order);
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
 
+        isOrderReady=true;
+        System.out.println("Chef: " + order + " is ready!");
+        notify();
     }
 }
 
@@ -137,8 +143,8 @@ class Waiter extends Thread{
     }
 
     public void run(){
-        acceptOrder("Fried Chiken");
-        restaurant.placeOrder("Fried Chicken");
+        acceptOrder("fried chicken");
+        restaurant.placeOrder(orderName);
     }
 }
 
@@ -165,19 +171,8 @@ public class RestaurantManagement {
         chef.setName("Chef Thread");
 
         System.out.println("Welcome to " + restaurant.getRestaurantName() + " Restaurant!!!");
-        System.out.println("----------------------------------------");
 
         waiter.start();
         chef.start();
-
-        try {
-            waiter.join();
-            chef.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        System.out.println("----------------------------------------");
-        System.out.println("Order delivery completed!");
     }
 }
