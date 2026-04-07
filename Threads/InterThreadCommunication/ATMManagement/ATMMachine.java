@@ -1,4 +1,4 @@
-package Threads.InterThreadCommunication;
+package Threads.InterThreadCommunication.ATMManagement;
 
 //Develop a program by using ITC, where two customers called Depositor and Drawer
 //will deposit and withdraw the money respectively from the ATM machine.
