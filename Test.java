@@ -1,19 +1,19 @@
-class MultiThread extends Thread
+class Test extends Thread
 {
-    public void run() {
-        System.out.print(Thread.currentThread().getId()+" ");
-    }
-
-    @Override
-    public void start() {
-        System.out.print(Thread.currentThread().getName()+" ");
-    }
-
-    public static void main(String[] args) {
-        MultiThread nit = new MultiThread();
-        for(int i=0;i<10;i++)
+    public void run()
+    {
+        for(int i=0; i<=10; i++)
         {
-            nit.run();
+            System.out.println("Hello Welcome here.."+i);
         }
+    }
+}
+class Test1
+{
+    public static void main(String[] args)
+    {
+        Test t = new Test();
+        t.start();
+        t.start();
     }
 }

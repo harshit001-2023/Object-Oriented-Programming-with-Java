@@ -21,6 +21,22 @@ class Test1
 	}
 }
 
+ANS: Exception in thread "main" java.lang.IllegalThreadStateException
+     	at java.base/java.lang.Thread.start(Thread.java:1416)
+     	at Test1.main(Test.java:17)
+     Hello Welcome here..0
+     Hello Welcome here..1
+     Hello Welcome here..2
+     Hello Welcome here..3
+     Hello Welcome here..4
+     Hello Welcome here..5
+     Hello Welcome here..6
+     Hello Welcome here..7
+     Hello Welcome here..8
+     Hello Welcome here..9
+     Hello Welcome here..10
+
+
 
 
 Q2)
